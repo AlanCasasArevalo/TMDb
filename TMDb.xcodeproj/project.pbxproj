@@ -12,9 +12,13 @@
 		515C4F4E2229769F0047F460 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F4D2229769F0047F460 /* Constants.swift */; };
 		515C4F50222979F70047F460 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F4F222979F70047F460 /* Endpoint.swift */; };
 		515C4F5222297D8F0047F460 /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F5122297D8F0047F460 /* WebServiceAssembly.swift */; };
-		515C4F5522297ECF0047F460 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F5422297ECF0047F460 /* CoreAssembly.swift */; };
 		515C4F572229812F0047F460 /* ImageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F562229812F0047F460 /* ImageConfiguration.swift */; };
 		515C4F59222981520047F460 /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F58222981520047F460 /* ImageSize.swift */; };
+		515C4F5C2229A6BD0047F460 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F5B2229A6BD0047F460 /* AppAssembly.swift */; };
+		515C4F5F2229A8A00047F460 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F5E2229A8A00047F460 /* CoreAssembly.swift */; };
+		515C4F612229AAAC0047F460 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F602229AAAC0047F460 /* ImageManager.swift */; };
+		515C4F632229ACB60047F460 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F622229ACB60047F460 /* ImageRepository.swift */; };
+		515C4F662229BC930047F460 /* ImageLoadingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F652229BC930047F460 /* ImageLoadingAssembly.swift */; };
 		519A425B22287C3C00DCCBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A425A22287C3C00DCCBB8 /* AppDelegate.swift */; };
 		519A426222287C3D00DCCBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519A426122287C3D00DCCBB8 /* Assets.xcassets */; };
 		519A426522287C3D00DCCBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 519A426322287C3D00DCCBB8 /* LaunchScreen.storyboard */; };
@@ -56,9 +60,14 @@
 		515C4F4D2229769F0047F460 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		515C4F4F222979F70047F460 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		515C4F5122297D8F0047F460 /* WebServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAssembly.swift; sourceTree = "<group>"; };
-		515C4F5422297ECF0047F460 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		515C4F562229812F0047F460 /* ImageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConfiguration.swift; sourceTree = "<group>"; };
 		515C4F58222981520047F460 /* ImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
+		515C4F5B2229A6BD0047F460 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		515C4F5E2229A8A00047F460 /* CoreAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreAssembly.swift; path = "APP Core/CoreAssembly.swift"; sourceTree = SOURCE_ROOT; };
+		515C4F602229AAAC0047F460 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		515C4F622229ACB60047F460 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		515C4F642229BC6B0047F460 /* ImageLoading.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ImageLoading.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		515C4F652229BC930047F460 /* ImageLoadingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingAssembly.swift; sourceTree = "<group>"; };
 		519A425722287C3C00DCCBB8 /* TMDb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519A425A22287C3C00DCCBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		519A426122287C3D00DCCBB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,14 +148,26 @@
 			isa = PBXGroup;
 			children = (
 				515C4F562229812F0047F460 /* ImageConfiguration.swift */,
+				515C4F652229BC930047F460 /* ImageLoadingAssembly.swift */,
 				515C4F58222981520047F460 /* ImageSize.swift */,
+				515C4F622229ACB60047F460 /* ImageRepository.swift */,
+				515C4F602229AAAC0047F460 /* ImageManager.swift */,
 			);
 			path = "Image Loading";
+			sourceTree = "<group>";
+		};
+		515C4F5D2229A7DB0047F460 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				515C4F5E2229A8A00047F460 /* CoreAssembly.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		519A424E22287C3C00DCCBB8 = {
 			isa = PBXGroup;
 			children = (
+				515C4F642229BC6B0047F460 /* ImageLoading.playground */,
 				519A427E2228801000DCCBB8 /* WebService.playground */,
 				519A425922287C3C00DCCBB8 /* TMDb */,
 				519A427222287E0C00DCCBB8 /* APP Core */,
@@ -169,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				519A425A22287C3C00DCCBB8 /* AppDelegate.swift */,
+				515C4F5B2229A6BD0047F460 /* AppAssembly.swift */,
 				519A426122287C3D00DCCBB8 /* Assets.xcassets */,
 				519A426322287C3D00DCCBB8 /* LaunchScreen.storyboard */,
 				519A426622287C3D00DCCBB8 /* Info.plist */,
@@ -181,7 +203,7 @@
 			children = (
 				519A427322287E0C00DCCBB8 /* APP_Core.h */,
 				519A427422287E0C00DCCBB8 /* Info.plist */,
-				515C4F5422297ECF0047F460 /* CoreAssembly.swift */,
+				515C4F5D2229A7DB0047F460 /* DI */,
 				515C4F5A2229815B0047F460 /* Image Loading */,
 				515C4F5322297EA50047F460 /* Common */,
 				515C4F49222974FC0047F460 /* Web Service */,
@@ -379,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				519A425B22287C3C00DCCBB8 /* AppDelegate.swift in Sources */,
+				515C4F5C2229A6BD0047F460 /* AppAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,11 +410,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				515C4F59222981520047F460 /* ImageSize.swift in Sources */,
-				515C4F5522297ECF0047F460 /* CoreAssembly.swift in Sources */,
 				515C4F4B222975EE0047F460 /* WebService.swift in Sources */,
+				515C4F5F2229A8A00047F460 /* CoreAssembly.swift in Sources */,
+				515C4F612229AAAC0047F460 /* ImageManager.swift in Sources */,
 				519A42802228808D00DCCBB8 /* WebServiceConfiguration.swift in Sources */,
+				515C4F662229BC930047F460 /* ImageLoadingAssembly.swift in Sources */,
 				515C4F50222979F70047F460 /* Endpoint.swift in Sources */,
 				515C4F572229812F0047F460 /* ImageConfiguration.swift in Sources */,
+				515C4F632229ACB60047F460 /* ImageRepository.swift in Sources */,
 				515C4F4E2229769F0047F460 /* Constants.swift in Sources */,
 				515C4F5222297D8F0047F460 /* WebServiceAssembly.swift in Sources */,
 			);

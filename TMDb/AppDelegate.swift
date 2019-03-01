@@ -12,17 +12,15 @@ import APP_Core
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
-
+    let appAssembly = AppAssembly()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        window?.backgroundColor = UIColor.cyan
+        let initialVC =  UIViewController()
         
-        let navController = UINavigationController(rootViewController: UIViewController())
-        window?.rootViewController = navController
+        appAssembly.window.rootViewController = appAssembly.navigationController
+        appAssembly.navigationController.pushViewController(initialVC, animated: false)
+        appAssembly.window.makeKeyAndVisible()
         
         return true
     }

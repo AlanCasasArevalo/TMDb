@@ -15,7 +15,7 @@ let coreAssembly = CoreAssembly(navigationController: navController)
 
 let webService = coreAssembly.webServiceAssembly.webService
 
-webService.loadGenericFromApi(type: ImageConfiguration.self, endpoint: Endpoint.configuration)
+webService.loadGenericFromApi(type: ImageConfiguration.self, endpoint: .configuration)
     .subscribe(onNext: { image in
         let image = image.images.baseURL
         print(image)

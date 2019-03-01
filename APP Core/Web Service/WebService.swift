@@ -30,13 +30,13 @@ final public class WebService {
     public let baseURL = URL(string: CONSTANTS.CALLS.BASE_URL)!
     public let decoder = JSONDecoder()
     
-    public init(configuration: WebServiceConfiguration){
+    public init(configuration: WebServiceConfiguration = .default){
         self.configuration = configuration
     }
 
     public func loadGenericFromApi <Generic: Decodable> (type: Generic.Type, endpoint: Endpoint) -> Observable<Generic> {
         let decoder = self.decoder
-        let request = endpoint.request(baseURL: baseURL, parameters: configuration.parameters)
+        let request = endpoint.request(with: baseURL, parameters: configuration.parameters)
         
         return session.rx.dataFromApiObservable(request: request)
             .map{
