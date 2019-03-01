@@ -19,6 +19,11 @@
 		515C4F612229AAAC0047F460 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F602229AAAC0047F460 /* ImageManager.swift */; };
 		515C4F632229ACB60047F460 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F622229ACB60047F460 /* ImageRepository.swift */; };
 		515C4F662229BC930047F460 /* ImageLoadingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F652229BC930047F460 /* ImageLoadingAssembly.swift */; };
+		515C4F682229CE280047F460 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F672229CE280047F460 /* Show.swift */; };
+		515C4F6B2229CE4D0047F460 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F6A2229CE4D0047F460 /* Person.swift */; };
+		515C4F6D2229CE6B0047F460 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F6C2229CE6B0047F460 /* Media.swift */; };
+		515C4F6F2229CE8E0047F460 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F6E2229CE8E0047F460 /* Movie.swift */; };
+		515C4F712229CF830047F460 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F702229CF830047F460 /* MediaType.swift */; };
 		519A425B22287C3C00DCCBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A425A22287C3C00DCCBB8 /* AppDelegate.swift */; };
 		519A426222287C3D00DCCBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519A426122287C3D00DCCBB8 /* Assets.xcassets */; };
 		519A426522287C3D00DCCBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 519A426322287C3D00DCCBB8 /* LaunchScreen.storyboard */; };
@@ -68,6 +73,11 @@
 		515C4F622229ACB60047F460 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		515C4F642229BC6B0047F460 /* ImageLoading.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ImageLoading.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		515C4F652229BC930047F460 /* ImageLoadingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingAssembly.swift; sourceTree = "<group>"; };
+		515C4F672229CE280047F460 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		515C4F6A2229CE4D0047F460 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		515C4F6C2229CE6B0047F460 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		515C4F6E2229CE8E0047F460 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		515C4F702229CF830047F460 /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		519A425722287C3C00DCCBB8 /* TMDb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519A425A22287C3C00DCCBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		519A426122287C3D00DCCBB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +149,7 @@
 		515C4F5322297EA50047F460 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				515C4F692229CE380047F460 /* Domain */,
 				515C4F4D2229769F0047F460 /* Constants.swift */,
 			);
 			path = Common;
@@ -162,6 +173,18 @@
 				515C4F5E2229A8A00047F460 /* CoreAssembly.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		515C4F692229CE380047F460 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				515C4F672229CE280047F460 /* Show.swift */,
+				515C4F6A2229CE4D0047F460 /* Person.swift */,
+				515C4F6E2229CE8E0047F460 /* Movie.swift */,
+				515C4F6C2229CE6B0047F460 /* Media.swift */,
+				515C4F702229CF830047F460 /* MediaType.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		519A424E22287C3C00DCCBB8 = {
@@ -411,15 +434,20 @@
 			files = (
 				515C4F59222981520047F460 /* ImageSize.swift in Sources */,
 				515C4F4B222975EE0047F460 /* WebService.swift in Sources */,
+				515C4F6D2229CE6B0047F460 /* Media.swift in Sources */,
 				515C4F5F2229A8A00047F460 /* CoreAssembly.swift in Sources */,
 				515C4F612229AAAC0047F460 /* ImageManager.swift in Sources */,
 				519A42802228808D00DCCBB8 /* WebServiceConfiguration.swift in Sources */,
 				515C4F662229BC930047F460 /* ImageLoadingAssembly.swift in Sources */,
+				515C4F682229CE280047F460 /* Show.swift in Sources */,
 				515C4F50222979F70047F460 /* Endpoint.swift in Sources */,
 				515C4F572229812F0047F460 /* ImageConfiguration.swift in Sources */,
 				515C4F632229ACB60047F460 /* ImageRepository.swift in Sources */,
+				515C4F6B2229CE4D0047F460 /* Person.swift in Sources */,
+				515C4F712229CF830047F460 /* MediaType.swift in Sources */,
 				515C4F4E2229769F0047F460 /* Constants.swift in Sources */,
 				515C4F5222297D8F0047F460 /* WebServiceAssembly.swift in Sources */,
+				515C4F6F2229CE8E0047F460 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
