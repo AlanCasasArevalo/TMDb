@@ -9,7 +9,6 @@
 import UIKit
 import APP_Core
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -22,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor.cyan
         
-        window?.rootViewController = UIViewController()
+        let navController = UINavigationController(rootViewController: UIViewController())
+        window?.rootViewController = navController
         
         return true
     }

@@ -34,13 +34,13 @@ final public class WebService {
         self.configuration = configuration
     }
 
-    public func loadGenericFromApi <Generic: Decodable>(type: Generic, endpoint: Endpoint) -> Observable<Generic> {
+    public func loadGenericFromApi <Generic: Decodable> (type: Generic.Type, endpoint: Endpoint) -> Observable<Generic> {
         let decoder = self.decoder
         let request = endpoint.request(baseURL: baseURL, parameters: configuration.parameters)
         
         return session.rx.dataFromApiObservable(request: request)
-            .map{ dataResponse in
-                try decoder.decode(Generic.self, from: dataResponse)
+            .map{
+                try decoder.decode(Generic.self, from: $0)
             }
             .catchError{ error in
                 guard let webServiceError = error as? WebServiceError else { throw error }
@@ -53,6 +53,7 @@ final public class WebService {
 
 public extension Reactive where Base: URLSession {
     func dataFromApiObservable(request: URLRequest) -> Observable<Data> {
+            
         return Observable.create { observer in
             let task = self.base.dataTask(with: request) { data, response, error in
                 if let error = error {
@@ -70,6 +71,7 @@ public extension Reactive where Base: URLSession {
                 }
             }
             task.resume()
+            
             return Disposables.create {
                 task.cancel()
             }

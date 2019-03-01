@@ -19,4 +19,5 @@ struct Constants {
 
 struct BaseUrls {
     let BASE_URL = "https://api.themoviedb.org/3"
+    let BASE_IMAGE_URL = "https://image.tmdb.org/t/p/"
 }

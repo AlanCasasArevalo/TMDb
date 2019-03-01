@@ -18,9 +18,7 @@ public struct WebServiceConfiguration {
     public static let `default` =
         WebServiceConfiguration(language: Bundle.main.preferredLocalizations[0],
                                 apiKey: Bundle(for: WebServiceConfiguration.Dummy.self) .infoDictionary?["TMDB_API_KEY"] as? String ?? "")
-}
-
-public extension WebServiceConfiguration {
+    
     var parameters: [String : String] {
         return [
             "api_key" : apiKey,
