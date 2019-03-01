@@ -30,7 +30,7 @@ final public class WebService {
     public let baseURL = URL(string: CONSTANTS.CALLS.BASE_URL)!
     public let decoder = JSONDecoder()
     
-    public init(configuration: WebServiceConfiguration){
+    public init(configuration: WebServiceConfiguration = .default){
         self.configuration = configuration
     }
 
