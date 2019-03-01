@@ -1,0 +1,9 @@
+//
+//  Keys.xcconfig
+//  TMDb
+//
+//  Created by Alan Casas on 28/02/2019.
+//  Copyright © 2019 Alan Casas. All rights reserved.
+//
+
+TMDB_API_KEY = eb3289f4bb07a4659a97025942a3c2b7

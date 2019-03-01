@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		089979979E84041C54E8D838 /* Pods_APP_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC74B8F299F20CFC9788A56 /* Pods_APP_Core.framework */; };
+		515C4F4B222975EE0047F460 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F4A222975EE0047F460 /* WebService.swift */; };
+		515C4F4E2229769F0047F460 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F4D2229769F0047F460 /* Constants.swift */; };
+		515C4F50222979F70047F460 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F4F222979F70047F460 /* Endpoint.swift */; };
+		515C4F5222297D8F0047F460 /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F5122297D8F0047F460 /* WebServiceAssembly.swift */; };
+		515C4F5522297ECF0047F460 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F5422297ECF0047F460 /* CoreAssembly.swift */; };
 		519A425B22287C3C00DCCBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A425A22287C3C00DCCBB8 /* AppDelegate.swift */; };
 		519A426222287C3D00DCCBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519A426122287C3D00DCCBB8 /* Assets.xcassets */; };
 		519A426522287C3D00DCCBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 519A426322287C3D00DCCBB8 /* LaunchScreen.storyboard */; };
 		519A427522287E0C00DCCBB8 /* APP_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 519A427322287E0C00DCCBB8 /* APP_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		519A427822287E0C00DCCBB8 /* APP_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519A427122287E0C00DCCBB8 /* APP_Core.framework */; };
 		519A427922287E0C00DCCBB8 /* APP_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 519A427122287E0C00DCCBB8 /* APP_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		519A42802228808D00DCCBB8 /* WebServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A427F2228808D00DCCBB8 /* WebServiceConfiguration.swift */; };
 		97188FC8721E091BDD6B9C79 /* Pods_TMDb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6617DDC61704BD5D5313D5F3 /* Pods_TMDb.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +50,11 @@
 /* Begin PBXFileReference section */
 		3BC74B8F299F20CFC9788A56 /* Pods_APP_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APP_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D11DB356FC43A6E59CF3E43 /* Pods-TMDb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDb.release.xcconfig"; path = "Target Support Files/Pods-TMDb/Pods-TMDb.release.xcconfig"; sourceTree = "<group>"; };
+		515C4F4A222975EE0047F460 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		515C4F4D2229769F0047F460 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		515C4F4F222979F70047F460 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		515C4F5122297D8F0047F460 /* WebServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAssembly.swift; sourceTree = "<group>"; };
+		515C4F5422297ECF0047F460 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		519A425722287C3C00DCCBB8 /* TMDb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519A425A22287C3C00DCCBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		519A426122287C3D00DCCBB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +63,9 @@
 		519A427122287E0C00DCCBB8 /* APP_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APP_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		519A427322287E0C00DCCBB8 /* APP_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APP_Core.h; sourceTree = "<group>"; };
 		519A427422287E0C00DCCBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		519A427E2228801000DCCBB8 /* WebService.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WebService.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		519A427F2228808D00DCCBB8 /* WebServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConfiguration.swift; sourceTree = "<group>"; };
+		519A42812228816200DCCBB8 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
 		6617DDC61704BD5D5313D5F3 /* Pods_TMDb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C1EF6B6F499679582593644 /* Pods-APP Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APP Core.release.xcconfig"; path = "Target Support Files/Pods-APP Core/Pods-APP Core.release.xcconfig"; sourceTree = "<group>"; };
 		B58E59CC3EDD7F3112DA8C34 /* Pods-APP Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APP Core.debug.xcconfig"; path = "Target Support Files/Pods-APP Core/Pods-APP Core.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,13 +101,40 @@
 				B9F90EC9B24B72BC24E10A26 /* Pods-TMDb.debug.xcconfig */,
 				3D11DB356FC43A6E59CF3E43 /* Pods-TMDb.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		515C4F48222974F00047F460 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				519A42812228816200DCCBB8 /* Keys.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		515C4F49222974FC0047F460 /* Web Service */ = {
+			isa = PBXGroup;
+			children = (
+				519A427F2228808D00DCCBB8 /* WebServiceConfiguration.swift */,
+				515C4F5122297D8F0047F460 /* WebServiceAssembly.swift */,
+				515C4F4A222975EE0047F460 /* WebService.swift */,
+				515C4F4F222979F70047F460 /* Endpoint.swift */,
+			);
+			path = "Web Service";
+			sourceTree = "<group>";
+		};
+		515C4F5322297EA50047F460 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				515C4F4D2229769F0047F460 /* Constants.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		519A424E22287C3C00DCCBB8 = {
 			isa = PBXGroup;
 			children = (
+				519A427E2228801000DCCBB8 /* WebService.playground */,
 				519A425922287C3C00DCCBB8 /* TMDb */,
 				519A427222287E0C00DCCBB8 /* APP Core */,
 				519A425822287C3C00DCCBB8 /* Products */,
@@ -127,6 +168,10 @@
 			children = (
 				519A427322287E0C00DCCBB8 /* APP_Core.h */,
 				519A427422287E0C00DCCBB8 /* Info.plist */,
+				515C4F5422297ECF0047F460 /* CoreAssembly.swift */,
+				515C4F5322297EA50047F460 /* Common */,
+				515C4F49222974FC0047F460 /* Web Service */,
+				515C4F48222974F00047F460 /* Config */,
 			);
 			path = "APP Core";
 			sourceTree = "<group>";
@@ -209,6 +254,7 @@
 					};
 					519A427022287E0C00DCCBB8 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -256,8 +302,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TMDb/Pods-TMDb-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -266,8 +310,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -284,15 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-APP Core-checkManifestLockResult.txt",
 			);
@@ -306,15 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-TMDb-checkManifestLockResult.txt",
 			);
@@ -338,6 +372,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515C4F5522297ECF0047F460 /* CoreAssembly.swift in Sources */,
+				515C4F4B222975EE0047F460 /* WebService.swift in Sources */,
+				519A42802228808D00DCCBB8 /* WebServiceConfiguration.swift in Sources */,
+				515C4F50222979F70047F460 /* Endpoint.swift in Sources */,
+				515C4F4E2229769F0047F460 /* Constants.swift in Sources */,
+				515C4F5222297D8F0047F460 /* WebServiceAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9F90EC9B24B72BC24E10A26 /* Pods-TMDb.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TMDb/Info.plist;
@@ -499,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D11DB356FC43A6E59CF3E43 /* Pods-TMDb.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TMDb/Info.plist;
@@ -517,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B58E59CC3EDD7F3112DA8C34 /* Pods-APP Core.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -535,6 +578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alancasasarevalo-gmail.APP-Core";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -546,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C1EF6B6F499679582593644 /* Pods-APP Core.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
