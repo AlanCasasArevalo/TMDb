@@ -17,7 +17,7 @@ public enum Endpoint {
 }
 
 public extension Endpoint {
-    func request (baseURL: URL, parameters: [String: String]) -> URLRequest{
+    func request (with baseURL: URL, parameters: [String: String]) -> URLRequest{
         let url = baseURL.appendingPathComponent(path)
         var newParameters = self.parameters
         parameters.forEach {
