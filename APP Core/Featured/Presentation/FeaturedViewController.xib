@@ -33,25 +33,14 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-5b-Ylh">
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="181" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-5b-Ylh">
                             <rect key="frame" x="0.0" y="45" width="375" height="181"/>
-                            <color key="backgroundColor" red="0.62427209979999998" green="1" blue="0.82672762649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="tintColor" red="1" green="0.48211897585916907" blue="0.56575156308442787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="181" id="7LT-4G-03b"/>
-                            </constraints>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="06i-Sx-kpY">
-                            <rect key="frame" x="0.0" y="266" width="375" height="207"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="207" id="JbJ-zH-1hT"/>
-                            </constraints>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="207" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="06i-Sx-kpY">
+                            <rect key="frame" x="0.0" y="270.5" width="375" height="207"/>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8i-cq-s38">
-                            <rect key="frame" x="16" y="242" width="42" height="16"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="16" id="P2w-1a-09V"/>
-                            </constraints>
+                            <rect key="frame" x="16" y="242" width="42" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

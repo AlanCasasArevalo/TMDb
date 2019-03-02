@@ -63,7 +63,7 @@ extension CardPresenter {
     func bindBackdrop(path: String?, cardView: CardView) {
         guard let path = path else { return }
         
-        imageRepositoryProtocol.imageFromApi(path: path, size: .w780)
+        imageRepositoryProtocol.imageFromApi(path: path, size: .w500)
             .observeOn(MainScheduler.instance)
             .bind(to: cardView.backdropImageView.rx.image)
             .disposed(by: cardView.disposeBag)
