@@ -15,9 +15,15 @@ let CONSTANTS = Constants()
 
 struct Constants {
     let CALLS = BaseUrls()
+    let TABLE_VIEW_CONSTANS = TableViewConstants()
 }
 
 struct BaseUrls {
     let BASE_URL = "https://api.themoviedb.org/3"
     let BASE_IMAGE_URL = "https://image.tmdb.org/t/p/"
+}
+
+struct TableViewConstants {
+    let separatorInset = UIEdgeInsets(top: 0, left: 64, bottom: 0, right: 0)
+    let rowHeight: CGFloat = 88
 }

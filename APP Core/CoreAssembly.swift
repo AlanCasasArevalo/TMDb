@@ -11,6 +11,7 @@ import Foundation
 final public class CoreAssembly {
     public lazy var webServiceAssembly = WebServiceAssembly()
     public lazy var imageLoadingAssembly = ImageLoadingAssembly(webServiceAssembly: webServiceAssembly)
+    public lazy var searchAssembly = SearchAssembly(imageLoadingAssembly: imageLoadingAssembly)
     public let navigationController: UINavigationController
     
     public init(navigationController: UINavigationController) {

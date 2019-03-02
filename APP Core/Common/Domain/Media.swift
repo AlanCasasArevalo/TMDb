@@ -8,17 +8,17 @@
 
 import Foundation
 
-enum Media {
+public enum Media {
     case movie(Movie)
     case show(Show)
 }
 
 extension Media: Decodable {
-    private enum CodingKeys: String, CodingKey {
+    public  enum CodingKeys: String, CodingKey {
         case mediaType = "media_type"
     }
     
-    init(from decoder: Decoder) throws {
+   public  init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let mediaType = try container.decode(String.self, forKey: .mediaType)
         
