@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardView" customModule="APP_Core" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ewf-oK-SUq" userLabel="Backdrop View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="miL-Lq-otZ" userLabel="BackdropGradient">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LQ-qO-Mdt">
+                    <rect key="frame" x="16" y="123" width="40" height="25"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metadata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3G-M2-ucP">
+                    <rect key="frame" x="16" y="150" width="61" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.83913308379999996" green="0.83925765750000003" blue="0.83911609649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B3G-M2-ucP" secondAttribute="trailing" constant="16" id="0Ox-QP-wXQ"/>
+                <constraint firstItem="miL-Lq-otZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="4Vd-dM-Zlq"/>
+                <constraint firstItem="miL-Lq-otZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="52M-HI-WV7"/>
+                <constraint firstItem="4LQ-qO-Mdt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Csq-cZ-Xww"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="miL-Lq-otZ" secondAttribute="trailing" id="DEE-iJ-Ehe"/>
+                <constraint firstItem="B3G-M2-ucP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="JLM-cT-so1"/>
+                <constraint firstItem="Ewf-oK-SUq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Lcv-6z-w5Y"/>
+                <constraint firstItem="B3G-M2-ucP" firstAttribute="top" secondItem="4LQ-qO-Mdt" secondAttribute="bottom" constant="2" id="Sqw-ig-qr1"/>
+                <constraint firstItem="Ewf-oK-SUq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UT4-4d-kyw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4LQ-qO-Mdt" secondAttribute="trailing" constant="16" id="Vzx-dS-LFD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ewf-oK-SUq" secondAttribute="trailing" id="cdF-2r-MzL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="B3G-M2-ucP" secondAttribute="bottom" constant="8" id="gXc-pU-be2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="miL-Lq-otZ" secondAttribute="bottom" id="kmC-mV-x4Z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ewf-oK-SUq" secondAttribute="bottom" id="ojH-11-j7G"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backdropImageView" destination="Ewf-oK-SUq" id="6an-a3-H6W"/>
+                <outlet property="metadataLabel" destination="B3G-M2-ucP" id="ZtM-bm-shR"/>
+                <outlet property="tapGestureRecognizer" destination="dFV-G0-gof" id="ZKc-4c-sjU"/>
+                <outlet property="titleLabel" destination="4LQ-qO-Mdt" id="rcs-s0-tm5"/>
+                <outletCollection property="gestureRecognizers" destination="dFV-G0-gof" appends="YES" id="43e-nD-2pR"/>
+            </connections>
+            <point key="canvasLocation" x="-483" y="-339"/>
+        </view>
+        <tapGestureRecognizer id="dFV-G0-gof"/>
+    </objects>
+</document>

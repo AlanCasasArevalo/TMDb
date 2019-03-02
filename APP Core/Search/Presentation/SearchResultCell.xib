@@ -66,7 +66,7 @@
                 <outlet property="posterImageView" destination="UDQ-rR-bCx" id="tvA-X1-gyy"/>
                 <outlet property="titleLabel" destination="Pd7-Wt-Ww5" id="sxg-h5-l3Z"/>
             </connections>
-            <point key="canvasLocation" x="-353" y="-158"/>
+            <point key="canvasLocation" x="-717" y="-166"/>
         </tableViewCell>
     </objects>
 </document>

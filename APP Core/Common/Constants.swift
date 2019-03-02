@@ -15,7 +15,8 @@ let CONSTANTS = Constants()
 
 struct Constants {
     let CALLS = BaseUrls()
-    let TABLE_VIEW_CONSTANS = TableViewConstants()
+    let TABLE_VIEW_CONSTANTS = TableViewConstants()
+    let CARD_VIEW_CONSTANTS = CardViewConstants()
 }
 
 struct BaseUrls {
@@ -26,4 +27,8 @@ struct BaseUrls {
 struct TableViewConstants {
     let separatorInset = UIEdgeInsets(top: 0, left: 64, bottom: 0, right: 0)
     let rowHeight: CGFloat = 88
+}
+
+struct CardViewConstants {
+    let cgSizeHeight: CGFloat = 176
 }

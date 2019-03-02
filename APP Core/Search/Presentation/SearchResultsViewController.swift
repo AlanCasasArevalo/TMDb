@@ -37,8 +37,8 @@ extension SearchResultsViewController {
     
     public func setupView() {
         tableView.register(SearchResultCell.self)
-        tableView.separatorInset = CONSTANTS.TABLE_VIEW_CONSTANS.separatorInset
-        tableView.rowHeight = CONSTANTS.TABLE_VIEW_CONSTANS.rowHeight
+        tableView.separatorInset = CONSTANTS.TABLE_VIEW_CONSTANTS.separatorInset
+        tableView.rowHeight = CONSTANTS.TABLE_VIEW_CONSTANTS.rowHeight
     }
 
     public func bindPresenters() {
