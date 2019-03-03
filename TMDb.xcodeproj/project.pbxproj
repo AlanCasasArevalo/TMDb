@@ -12,6 +12,8 @@
 		5128FDB1222BBDB1003EE401 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDAF222BBDB1003EE401 /* DetailViewController.xib */; };
 		5128FDB5222BBDE7003EE401 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDB4222BBDE7003EE401 /* DetailAssembly.swift */; };
 		5128FDB8222BBE05003EE401 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDB7222BBE05003EE401 /* MovieRepository.swift */; };
+		5128FDBB222BC1BA003EE401 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDBA222BC1BA003EE401 /* DetailHeaderView.swift */; };
+		5128FDBD222BC1CC003EE401 /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDBC222BC1CC003EE401 /* DetailHeaderView.xib */; };
 		5142A03B222A845C003DE338 /* SearchResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A03A222A845C003DE338 /* SearchResultsPresenter.swift */; };
 		5142A03E222A8618003DE338 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A03D222A8618003DE338 /* SearchResultsViewController.swift */; };
 		5142A043222AA284003DE338 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A042222AA284003DE338 /* CardView.swift */; };
@@ -93,6 +95,8 @@
 		5128FDAF222BBDB1003EE401 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		5128FDB4222BBDE7003EE401 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
 		5128FDB7222BBE05003EE401 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		5128FDBA222BC1BA003EE401 /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
+		5128FDBC222BC1CC003EE401 /* DetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderView.xib; sourceTree = "<group>"; };
 		5142A03A222A845C003DE338 /* SearchResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsPresenter.swift; sourceTree = "<group>"; };
 		5142A03D222A8618003DE338 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		5142A041222AA1FC003DE338 /* Featured.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Featured.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -190,6 +194,8 @@
 			children = (
 				5128FDAE222BBDB1003EE401 /* DetailViewController.swift */,
 				5128FDAF222BBDB1003EE401 /* DetailViewController.xib */,
+				5128FDBA222BC1BA003EE401 /* DetailHeaderView.swift */,
+				5128FDBC222BC1CC003EE401 /* DetailHeaderView.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -549,6 +555,7 @@
 				51F59E74222AFE660029DA4F /* genres.json in Resources */,
 				5142A059222ABEF7003DE338 /* FeaturedViewController.xib in Resources */,
 				515C4F8B222A64220047F460 /* SearchResultCell.xib in Resources */,
+				5128FDBD222BC1CC003EE401 /* DetailHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +674,7 @@
 				5142A043222AA284003DE338 /* CardView.swift in Sources */,
 				515C4F632229ACB60047F460 /* ImageRepository.swift in Sources */,
 				515C4F732229D09E0047F460 /* Date+Utilities.swift in Sources */,
+				5128FDBB222BC1BA003EE401 /* DetailHeaderView.swift in Sources */,
 				515C4F7B2229D1B20047F460 /* UICollectionView+Reusable.swift in Sources */,
 				5128FDB5222BBDE7003EE401 /* DetailAssembly.swift in Sources */,
 				515C4F752229D0BA0047F460 /* NibLoadableView.swift in Sources */,
