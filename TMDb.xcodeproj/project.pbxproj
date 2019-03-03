@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		089979979E84041C54E8D838 /* Pods_APP_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC74B8F299F20CFC9788A56 /* Pods_APP_Core.framework */; };
+		5128FDB0222BBDB1003EE401 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDAE222BBDB1003EE401 /* DetailViewController.swift */; };
+		5128FDB1222BBDB1003EE401 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDAF222BBDB1003EE401 /* DetailViewController.xib */; };
+		5128FDB5222BBDE7003EE401 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDB4222BBDE7003EE401 /* DetailAssembly.swift */; };
+		5128FDB8222BBE05003EE401 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDB7222BBE05003EE401 /* MovieRepository.swift */; };
 		5142A03B222A845C003DE338 /* SearchResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A03A222A845C003DE338 /* SearchResultsPresenter.swift */; };
 		5142A03E222A8618003DE338 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A03D222A8618003DE338 /* SearchResultsViewController.swift */; };
 		5142A043222AA284003DE338 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A042222AA284003DE338 /* CardView.swift */; };
@@ -85,6 +89,10 @@
 /* Begin PBXFileReference section */
 		3BC74B8F299F20CFC9788A56 /* Pods_APP_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APP_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D11DB356FC43A6E59CF3E43 /* Pods-TMDb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDb.release.xcconfig"; path = "Target Support Files/Pods-TMDb/Pods-TMDb.release.xcconfig"; sourceTree = "<group>"; };
+		5128FDAE222BBDB1003EE401 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5128FDAF222BBDB1003EE401 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		5128FDB4222BBDE7003EE401 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
+		5128FDB7222BBE05003EE401 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		5142A03A222A845C003DE338 /* SearchResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsPresenter.swift; sourceTree = "<group>"; };
 		5142A03D222A8618003DE338 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		5142A041222AA1FC003DE338 /* Featured.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Featured.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -175,6 +183,41 @@
 				3D11DB356FC43A6E59CF3E43 /* Pods-TMDb.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5128FDB2222BBDB9003EE401 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5128FDAE222BBDB1003EE401 /* DetailViewController.swift */,
+				5128FDAF222BBDB1003EE401 /* DetailViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5128FDB3222BBDC2003EE401 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				5128FDB2222BBDB9003EE401 /* Presentation */,
+				5128FDB6222BBDEC003EE401 /* DI */,
+				5128FDB9222BBE0C003EE401 /* Repositories */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		5128FDB6222BBDEC003EE401 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				5128FDB4222BBDE7003EE401 /* DetailAssembly.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		5128FDB9222BBE0C003EE401 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5128FDB7222BBE05003EE401 /* MovieRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		5142A048222AB308003DE338 /* Presentation */ = {
@@ -364,6 +407,7 @@
 			children = (
 				519A427322287E0C00DCCBB8 /* APP_Core.h */,
 				519A427422287E0C00DCCBB8 /* Info.plist */,
+				5128FDB3222BBDC2003EE401 /* Details */,
 				5142A049222AB311003DE338 /* Featured */,
 				515C4F7F222A5F070047F460 /* Search */,
 				515C4F5D2229A7DB0047F460 /* DI */,
@@ -500,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5142A045222AA29F003DE338 /* CardView.xib in Resources */,
+				5128FDB1222BBDB1003EE401 /* DetailViewController.xib in Resources */,
 				5142A047222AA54F003DE338 /* Assets.xcassets in Resources */,
 				51F59E74222AFE660029DA4F /* genres.json in Resources */,
 				5142A059222ABEF7003DE338 /* FeaturedViewController.xib in Resources */,
@@ -607,6 +652,7 @@
 				515C4F8A222A64220047F460 /* SearchResultCell.swift in Sources */,
 				5142A04F222AB844003DE338 /* FeaturedRepository.swift in Sources */,
 				515C4F5F2229A8A00047F460 /* CoreAssembly.swift in Sources */,
+				5128FDB8222BBE05003EE401 /* MovieRepository.swift in Sources */,
 				515C4F612229AAAC0047F460 /* ImageManager.swift in Sources */,
 				5142A03E222A8618003DE338 /* SearchResultsViewController.swift in Sources */,
 				519A42802228808D00DCCBB8 /* WebServiceConfiguration.swift in Sources */,
@@ -622,10 +668,12 @@
 				515C4F632229ACB60047F460 /* ImageRepository.swift in Sources */,
 				515C4F732229D09E0047F460 /* Date+Utilities.swift in Sources */,
 				515C4F7B2229D1B20047F460 /* UICollectionView+Reusable.swift in Sources */,
+				5128FDB5222BBDE7003EE401 /* DetailAssembly.swift in Sources */,
 				515C4F752229D0BA0047F460 /* NibLoadableView.swift in Sources */,
 				515C4F6B2229CE4D0047F460 /* Person.swift in Sources */,
 				515C4F772229D0E50047F460 /* ReusableView.swift in Sources */,
 				515C4F712229CF830047F460 /* MediaType.swift in Sources */,
+				5128FDB0222BBDB1003EE401 /* DetailViewController.swift in Sources */,
 				515C4F4E2229769F0047F460 /* Constants.swift in Sources */,
 				515C4F84222A60980047F460 /* SearchResultPresenter.swift in Sources */,
 				515C4F5222297D8F0047F460 /* WebServiceAssembly.swift in Sources */,
