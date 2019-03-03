@@ -16,6 +16,8 @@
 		5128FDBD222BC1CC003EE401 /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDBC222BC1CC003EE401 /* DetailHeaderView.xib */; };
 		5128FDBF222BEA96003EE401 /* DetailAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDBE222BEA96003EE401 /* DetailAbout.swift */; };
 		5128FDC1222BEA9F003EE401 /* DetailAbout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDC0222BEA9F003EE401 /* DetailAbout.xib */; };
+		5128FDC4222BECAF003EE401 /* PosterStripCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDC2222BECAF003EE401 /* PosterStripCollectionCell.swift */; };
+		5128FDC5222BECAF003EE401 /* PosterStripCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDC3222BECAF003EE401 /* PosterStripCollectionCell.xib */; };
 		5142A03B222A845C003DE338 /* SearchResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A03A222A845C003DE338 /* SearchResultsPresenter.swift */; };
 		5142A03E222A8618003DE338 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A03D222A8618003DE338 /* SearchResultsViewController.swift */; };
 		5142A043222AA284003DE338 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A042222AA284003DE338 /* CardView.swift */; };
@@ -101,6 +103,8 @@
 		5128FDBC222BC1CC003EE401 /* DetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderView.xib; sourceTree = "<group>"; };
 		5128FDBE222BEA96003EE401 /* DetailAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAbout.swift; sourceTree = "<group>"; };
 		5128FDC0222BEA9F003EE401 /* DetailAbout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAbout.xib; sourceTree = "<group>"; };
+		5128FDC2222BECAF003EE401 /* PosterStripCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterStripCollectionCell.swift; sourceTree = "<group>"; };
+		5128FDC3222BECAF003EE401 /* PosterStripCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterStripCollectionCell.xib; sourceTree = "<group>"; };
 		5142A03A222A845C003DE338 /* SearchResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsPresenter.swift; sourceTree = "<group>"; };
 		5142A03D222A8618003DE338 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		5142A041222AA1FC003DE338 /* Featured.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Featured.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -202,6 +206,8 @@
 				5128FDBC222BC1CC003EE401 /* DetailHeaderView.xib */,
 				5128FDBE222BEA96003EE401 /* DetailAbout.swift */,
 				5128FDC0222BEA9F003EE401 /* DetailAbout.xib */,
+				5128FDC2222BECAF003EE401 /* PosterStripCollectionCell.swift */,
+				5128FDC3222BECAF003EE401 /* PosterStripCollectionCell.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -560,6 +566,7 @@
 				5142A047222AA54F003DE338 /* Assets.xcassets in Resources */,
 				51F59E74222AFE660029DA4F /* genres.json in Resources */,
 				5142A059222ABEF7003DE338 /* FeaturedViewController.xib in Resources */,
+				5128FDC5222BECAF003EE401 /* PosterStripCollectionCell.xib in Resources */,
 				515C4F8B222A64220047F460 /* SearchResultCell.xib in Resources */,
 				5128FDC1222BEA9F003EE401 /* DetailAbout.xib in Resources */,
 				5128FDBD222BC1CC003EE401 /* DetailHeaderView.xib in Resources */,
@@ -674,6 +681,7 @@
 				515C4F662229BC930047F460 /* ImageLoadingAssembly.swift in Sources */,
 				515C4F682229CE280047F460 /* Show.swift in Sources */,
 				515C4F50222979F70047F460 /* Endpoint.swift in Sources */,
+				5128FDC4222BECAF003EE401 /* PosterStripCollectionCell.swift in Sources */,
 				5142A055222ABD4C003DE338 /* FeaturedPresenter.swift in Sources */,
 				515C4F86222A61DB0047F460 /* SearchResult.swift in Sources */,
 				5142A04B222AB39E003DE338 /* CardPresenter.swift in Sources */,
