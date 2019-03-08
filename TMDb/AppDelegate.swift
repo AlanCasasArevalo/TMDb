@@ -16,9 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        
-        let initialVC =  FeaturedViewController(featurePresenter: appAssembly.coreAssembly.featureAssembly.featuredPresenter(), cardPresenter: appAssembly.coreAssembly.featureAssembly.cardPresenter())
-        
+        let initialVC = appAssembly.coreAssembly.featureAssembly.viewController()
         appAssembly.window.rootViewController = appAssembly.navigationController
         appAssembly.navigationController.pushViewController(initialVC, animated: false)
         appAssembly.window.makeKeyAndVisible()

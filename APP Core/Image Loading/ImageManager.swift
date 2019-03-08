@@ -20,8 +20,7 @@ extension KingfisherManager: ImageManagerProtocol {
 
             let task = self.retrieveImage(with: resource,
                                           options: nil,
-                                          progressBlock: nil)
-                                        { image, error, _, _ in
+                                          progressBlock: nil) { image, error, _, _ in
                                             if let error = error {
                                                 observer.onError(error)
                                             }else{

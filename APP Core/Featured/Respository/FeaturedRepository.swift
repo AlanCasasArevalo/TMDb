@@ -34,6 +34,4 @@ public class FeaturedRepository: FeaturedRepositoryProtocol {
                 $0.results
             }
     }
-    
-    
 }

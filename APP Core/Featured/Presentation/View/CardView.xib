@@ -16,10 +16,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ewf-oK-SUq" userLabel="Backdrop View">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ewf-oK-SUq" userLabel="Backdrop View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="miL-Lq-otZ" userLabel="BackdropGradient">
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ItemBackdropGradient" translatesAutoresizingMaskIntoConstraints="NO" id="miL-Lq-otZ" userLabel="BackdropGradient">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LQ-qO-Mdt">
@@ -70,4 +70,7 @@
         </view>
         <tapGestureRecognizer id="dFV-G0-gof"/>
     </objects>
+    <resources>
+        <image name="ItemBackdropGradient" width="1" height="176"/>
+    </resources>
 </document>

@@ -13,6 +13,8 @@ final public class CoreAssembly {
     public lazy var imageLoadingAssembly = ImageLoadingAssembly(webServiceAssembly: webServiceAssembly)
     public lazy var searchAssembly = SearchAssembly(imageLoadingAssembly: imageLoadingAssembly)
     public lazy var featureAssembly = FeaturedAssembly(imageLoadingAssembly: imageLoadingAssembly)
+    public lazy var detailsAssembly = DetailsAssembly(imageLoadingAssembly: imageLoadingAssembly)
+    
     public let navigationController: UINavigationController
     
     public init(navigationController: UINavigationController) {
