@@ -17,6 +17,8 @@ struct Constants {
     let CALLS = BaseUrls()
     let TABLE_VIEW_CONSTANTS = TableViewConstants()
     let CARD_VIEW_CONSTANTS = CardViewConstants()
+    let POSTER_STRIP_VIEW_CONSTANTS = PosterStripViewConstants()
+    let POSTER_STRIP_LAYOUT_CONSTANTS = PosterStripLayoutConstans()
 }
 
 struct BaseUrls {
@@ -31,4 +33,14 @@ struct TableViewConstants {
 
 struct CardViewConstants {
     let cgSizeHeight: CGFloat = 176
+}
+
+struct PosterStripViewConstants {
+    let cgSizeHeight: CGFloat = 218
+}
+
+struct PosterStripLayoutConstans {
+    let itemSize = CGSize(width: 96, height: 186)
+    let minimumLineSpacing: CGFloat = 16
+    let sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
 }
