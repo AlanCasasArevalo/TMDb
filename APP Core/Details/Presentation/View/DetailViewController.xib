@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="detailScrollView" destination="T3s-zp-Btj" id="Wkm-VU-v8V"/>
                 <outlet property="detailStackView" destination="mjt-EQ-hDF" id="h74-rj-JIO"/>
+                <outlet property="loadingView" destination="GS5-ZC-ztI" id="eNg-NF-5Ri"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,6 +29,10 @@
                         <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="200" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-EQ-hDF">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         </stackView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="GS5-ZC-ztI">
+                            <rect key="frame" x="169.5" y="305.5" width="37" height="37"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="mjt-EQ-hDF" secondAttribute="bottom" id="2jk-XG-16t"/>
@@ -35,6 +40,8 @@
                         <constraint firstItem="mjt-EQ-hDF" firstAttribute="width" secondItem="T3s-zp-Btj" secondAttribute="width" id="Rr8-IP-9mh"/>
                         <constraint firstItem="mjt-EQ-hDF" firstAttribute="top" secondItem="T3s-zp-Btj" secondAttribute="top" id="aox-F8-ZrL"/>
                         <constraint firstAttribute="trailing" secondItem="mjt-EQ-hDF" secondAttribute="trailing" id="dJ8-YR-5Os"/>
+                        <constraint firstItem="GS5-ZC-ztI" firstAttribute="centerX" secondItem="T3s-zp-Btj" secondAttribute="centerX" id="nHC-3b-Oxm"/>
+                        <constraint firstItem="GS5-ZC-ztI" firstAttribute="centerY" secondItem="T3s-zp-Btj" secondAttribute="centerY" id="zj6-i6-uVd"/>
                     </constraints>
                 </scrollView>
             </subviews>

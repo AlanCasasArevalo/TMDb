@@ -1,5 +1,23 @@
 //: Playground - noun: a place where people can play
 
-import UIKit
+import PlaygroundSupport
+import APP_Core
+import RxSwift
 
-var str = "Hello, playground"
+PlaygroundPage.current.needsIndefiniteExecution = true
+
+let navController = UINavigationController(rootViewController: UIViewController())
+let coreAssembly = CoreAssembly(navigationController: navController)
+
+
+
+
+
+
+
+
+
+
+
+
+PlaygroundPage.current.liveView = navController

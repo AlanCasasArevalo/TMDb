@@ -26,3 +26,4 @@ webService.loadGenericFromApi(type: ImageConfiguration.self, endpoint: .configur
     })
 
 
+PlaygroundPage.current.liveView = navController

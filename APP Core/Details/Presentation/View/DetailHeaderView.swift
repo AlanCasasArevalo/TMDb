@@ -8,7 +8,7 @@
 
 import RxSwift
 
-class DetailHeaderView: UIView {
+class DetailHeaderView: UIView, NibLoadableView {
     
     @IBOutlet weak var detailBackdropImageView: UIImageView!
     @IBOutlet weak var detailPosterImageView: UIImageView!

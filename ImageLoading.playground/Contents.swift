@@ -10,7 +10,9 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 
 let disposeBag = DisposeBag()
 
-let coreAssembly = CoreAssembly(navigationController: UINavigationController())
+let navController = UINavigationController(rootViewController: UIViewController())
+
+let coreAssembly = CoreAssembly(navigationController: navController)
 let imageRepository = coreAssembly.imageLoadingAssembly.imageRepository
 
 imageRepository.imageFromApi(path: "sAzw6I1G9JUxm86KokIDdQeWtaq.jpg", size: .w500)
@@ -22,3 +24,5 @@ imageRepository.imageFromApi(path: "sAzw6I1G9JUxm86KokIDdQeWtaq.jpg", size: .w50
     })
     .disposed(by: disposeBag)
 
+
+PlaygroundPage.current.liveView = navController

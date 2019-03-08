@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailAbout: UIView {
+class DetailAboutView: UIView, NibLoadableView {
 
     @IBOutlet weak var detailAboutDetailsLabel: UILabel!
     @IBOutlet weak var detailAboutTitleLabel: UILabel!

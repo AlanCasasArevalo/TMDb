@@ -6,6 +6,9 @@ import APP_Core
     
 PlaygroundPage.current.needsIndefiniteExecution = true
 
+
+let navController = UINavigationController(rootViewController: UIViewController())
+
 let movie = Movie(identifier: 330459,
                   title: "Rogue One: A Star Wars Story",
                   posterPath: "/qjiskwlV1qQzRCjpV0cL9pEMF9a.jpg",
@@ -13,10 +16,10 @@ let movie = Movie(identifier: 330459,
                   releaseDate: Date(timeIntervalSince1970: 1474905532),
                   genreIdentifiers: [28, 12, 878])
 
-let coreAssembly = CoreAssembly(navigationController: UINavigationController())
+let coreAssembly = CoreAssembly(navigationController: navController)
 let featureVC = coreAssembly.featureAssembly.viewController()
 
 featureVC.view.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
 
 
-PlaygroundPage.current.liveView = featureVC
+PlaygroundPage.current.liveView = navController
