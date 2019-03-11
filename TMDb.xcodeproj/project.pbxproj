@@ -402,14 +402,10 @@
 		515C4F5322297EA50047F460 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				5142A046222AA54F003DE338 /* Assets.xcassets */,
+				51E842C02234F625001F616D /* Assets */,
 				515C4F692229CE380047F460 /* Domain */,
 				515C4F4D2229769F0047F460 /* Constants.swift */,
-				515C4F722229D09E0047F460 /* Date+Utilities.swift */,
-				515C4F742229D0BA0047F460 /* NibLoadableView.swift */,
-				515C4F762229D0E50047F460 /* ReusableView.swift */,
-				515C4F782229D1070047F460 /* UITableView+ReusableView.swift */,
-				515C4F7A2229D1B20047F460 /* UICollectionView+Reusable.swift */,
+				51E842C12234F646001F616D /* Utilities */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -530,6 +526,26 @@
 				515C4F48222974F00047F460 /* Config */,
 			);
 			path = "APP Core";
+			sourceTree = "<group>";
+		};
+		51E842C02234F625001F616D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5142A046222AA54F003DE338 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		51E842C12234F646001F616D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				515C4F722229D09E0047F460 /* Date+Utilities.swift */,
+				515C4F742229D0BA0047F460 /* NibLoadableView.swift */,
+				515C4F762229D0E50047F460 /* ReusableView.swift */,
+				515C4F782229D1070047F460 /* UITableView+ReusableView.swift */,
+				515C4F7A2229D1B20047F460 /* UICollectionView+Reusable.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		51F59E72222AF5EB0029DA4F /* DI */ = {

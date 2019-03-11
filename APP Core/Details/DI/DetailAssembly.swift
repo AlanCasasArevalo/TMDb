@@ -15,8 +15,12 @@ final public class DetailsAssembly {
         self.imageLoadingAssembly = imageLoadingAssembly
     }
 
-    public func posterStripPresenter() {
-        
+    func detailHeaderPresenter () -> DetailHeaderPresenter {
+        return DetailHeaderPresenter(imageRepositoryProtocol: imageLoadingAssembly.imageRepository)
+    }
+    
+    public func posterStripPresenter() -> PosterStripPresenter {
+        return PosterStripPresenter(imageRepositoryProtocol: imageLoadingAssembly.imageRepository)
     }
 
 }
