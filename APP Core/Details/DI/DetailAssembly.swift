@@ -10,9 +10,11 @@ import Foundation
 
 final public class DetailsAssembly {
     public let imageLoadingAssembly: ImageLoadingAssembly
-
-    public init (imageLoadingAssembly: ImageLoadingAssembly) {
+    public let navigationController: UINavigationController
+    
+    public init (imageLoadingAssembly: ImageLoadingAssembly, navigationController: UINavigationController) {
         self.imageLoadingAssembly = imageLoadingAssembly
+        self.navigationController = navigationController
     }
 
     func detailHeaderPresenter () -> DetailHeaderPresenter {
@@ -23,4 +25,22 @@ final public class DetailsAssembly {
         return PosterStripPresenter(imageRepositoryProtocol: imageLoadingAssembly.imageRepository)
     }
 
+    func detailNavigator() -> DetailNavigatorProtocol {
+        return PhoneDetailNavigator(navigationController: navigationController, viewControllerProvider: self)
+    }
+    
+}
+
+extension DetailsAssembly : DetailViewControllerProviderProtocol{
+    
+    // FIXME: Temporary we should change this for real DetailPresenter
+    private class DummyDetailPresenter: DetailPresenterProtocol {
+        var view: DetailViewProtocol?
+        func didLoad() {}
+        func didSelect(item: PosterStripItem) {}
+    }
+    
+    func detailViewController(identifier: Int64, mediaType: MediaType) -> UIViewController {
+        return DetailViewController(detailPresenter: DummyDetailPresenter(), detailHeaderPresenter: detailHeaderPresenter(), posterStripPresenter: posterStripPresenter())
+    }
 }

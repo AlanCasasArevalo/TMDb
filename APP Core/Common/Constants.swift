@@ -19,6 +19,7 @@ struct Constants {
     let CARD_VIEW_CONSTANTS = CardViewConstants()
     let POSTER_STRIP_VIEW_CONSTANTS = PosterStripViewConstants()
     let POSTER_STRIP_LAYOUT_CONSTANTS = PosterStripLayoutConstans()
+    let FEATURED_VIEW_LITERAL = FeaturedViewLiteral()
 }
 
 struct BaseUrls {
@@ -37,6 +38,12 @@ struct CardViewConstants {
 
 struct PosterStripViewConstants {
     let cgSizeHeight: CGFloat = 218
+}
+
+struct FeaturedViewLiteral {
+    let FeatureTitle = "Featured"
+    let FeatureShowHeader = "ON TV"
+    let FeatureMovieHeader = "IN THEATERS"
 }
 
 struct PosterStripLayoutConstans {

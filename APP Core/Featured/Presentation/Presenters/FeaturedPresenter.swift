@@ -19,20 +19,26 @@ public protocol FeaturedViewProtocol: class {
 
 public class FeaturedPresenter {
     weak var featureViewProtocol: FeaturedViewProtocol?
+    private let detailNavigator: DetailNavigatorProtocol
+    
+    init(detailNavigator: DetailNavigatorProtocol) {
+        self.detailNavigator = detailNavigator
+    }
     
     func didLoad() {
-        featureViewProtocol?.setShowsHeaderTitle(title: NSLocalizedString("ON TV", comment: ""))
-        featureViewProtocol?.setMoviesHeaderTitle(title: NSLocalizedString("IN THEATERS", comment: ""))
+        featureViewProtocol?.title = NSLocalizedString(CONSTANTS.FEATURED_VIEW_LITERAL.FeatureTitle, comment: "")
+        featureViewProtocol?.setShowsHeaderTitle(title: NSLocalizedString(CONSTANTS.FEATURED_VIEW_LITERAL.FeatureShowHeader, comment: ""))
+        featureViewProtocol?.setMoviesHeaderTitle(title: NSLocalizedString(CONSTANTS.FEATURED_VIEW_LITERAL.FeatureMovieHeader, comment: ""))
         
         addFakeContent()
     }
     
     func didSelect(show: Show) {
-        // TODO: implement
+        detailNavigator.showDetial(identifier: show.identifier, mediaType: .show)
     }
     
     func didSelect(movie: Movie) {
-        // TODO: implement
+        detailNavigator.showDetial(identifier: movie.identifier, mediaType: .movie)
     }
 }
 
@@ -44,7 +50,13 @@ extension FeaturedPresenter {
                  posterPath: "/gwSzP1cJL2HsBmGStN2vOg3d4Qd.jpg",
                  backdropPath: "/anDMMvgVV6pTNSxhHgiDPUjc4pH.jpg",
                  firstAirDate: Date(timeIntervalSince1970: 1274905532),
-                 genreIdentifiers: [18, 9648])
+                 genreIdentifiers: [18, 9648]),
+            Show(identifier: 1413,
+                 title: "American Horror Story",
+                 posterPath: "/gwSzP1cJL2HsBmGStN2vOg3d4Qd.jpg",
+                 backdropPath: "/anDMMvgVV6pTNSxhHgiDPUjc4pH.jpg",
+                 firstAirDate: Date(timeIntervalSince1970: 1274905532),
+                 genreIdentifiers: [18, 9648]),
         ]
         
         featureViewProtocol?.updateView(with: shows)

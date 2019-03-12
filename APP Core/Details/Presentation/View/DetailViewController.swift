@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DetailViewControllerProviderProtocol: class {
+    func detailViewController ( identifier: Int64, mediaType: MediaType ) -> UIViewController
+}
+
 public class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailScrollView: UIScrollView!
