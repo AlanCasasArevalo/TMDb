@@ -19,11 +19,13 @@ public class FeaturedViewController: UIViewController {
 
     public let featurePresenter: FeaturedPresenter
     public let cardPresenter: CardPresenter
+    public let searchNavigatorProtocol: SearchNavigatorProtocol
     public let disposeBag = DisposeBag()
 
-    public init(featurePresenter: FeaturedPresenter, cardPresenter: CardPresenter){
+    public init(featurePresenter: FeaturedPresenter, cardPresenter: CardPresenter, searchNavigatorProtocol: SearchNavigatorProtocol){
         self.featurePresenter = featurePresenter
         self.cardPresenter = cardPresenter
+        self.searchNavigatorProtocol = searchNavigatorProtocol
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
@@ -33,7 +35,8 @@ public class FeaturedViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        searchNavigatorProtocol.installSearch(viewController: self)
         featurePresenter.featureViewProtocol = self
         featurePresenter.didLoad()
         
@@ -43,11 +46,11 @@ public class FeaturedViewController: UIViewController {
 
 extension FeaturedViewController: FeaturedViewProtocol{
     public func setMoviesHeaderTitle(title: String) {
-        showsLabel.text = title
+        moviesLabel.text = title
     }
     
     public func setShowsHeaderTitle(title: String) {
-        moviesLabel.text = title
+        showsLabel.text = title
     }
     
     public func updateView(with movies: [Movie]) {

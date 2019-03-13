@@ -34,11 +34,11 @@ public class FeaturedPresenter {
     }
     
     func didSelect(show: Show) {
-        detailNavigator.showDetial(identifier: show.identifier, mediaType: .show)
+        detailNavigator.showDetail(identifier: show.identifier, mediaType: .show)
     }
     
     func didSelect(movie: Movie) {
-        detailNavigator.showDetial(identifier: movie.identifier, mediaType: .movie)
+        detailNavigator.showDetail(identifier: movie.identifier, mediaType: .movie)
     }
 }
 

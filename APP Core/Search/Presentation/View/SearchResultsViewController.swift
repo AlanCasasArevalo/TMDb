@@ -9,6 +9,10 @@
 import RxCocoa
 import RxSwift
 
+protocol SearchResultsViewControllerProvider: class {
+    func searchResultsViewController () -> SearchResultsViewController
+}
+
 public class SearchResultsViewController: UITableViewController {
     
     public let presenter: SearchResultsPresenter
@@ -28,7 +32,8 @@ public class SearchResultsViewController: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
-        self.bindPresenters()        
+        tableView.dataSource = nil
+        self.bindPresenters()
     }
     
 }

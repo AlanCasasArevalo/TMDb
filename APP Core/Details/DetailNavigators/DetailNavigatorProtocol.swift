@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol DetailNavigatorProtocol {
-    func showDetial(identifier: Int64, mediaType: MediaType)
+public protocol DetailNavigatorProtocol {
+    func showDetail(identifier: Int64, mediaType: MediaType)
 }
 
 

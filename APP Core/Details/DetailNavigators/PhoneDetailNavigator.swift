@@ -9,6 +9,7 @@
 import UIKit
 
 final class PhoneDetailNavigator: DetailNavigatorProtocol {
+    
     private let navigationController: UINavigationController
     private weak var viewControllerProvider: DetailViewControllerProviderProtocol?
     
@@ -17,7 +18,7 @@ final class PhoneDetailNavigator: DetailNavigatorProtocol {
         self.viewControllerProvider = viewControllerProvider
     }
     
-    func showDetial(identifier: Int64, mediaType: MediaType) {
+    func showDetail(identifier: Int64, mediaType: MediaType) {
         let viewController = viewControllerProvider?.detailViewController(identifier: identifier, mediaType: mediaType)
         navigationController.pushViewController(viewController!, animated: true)
     }    

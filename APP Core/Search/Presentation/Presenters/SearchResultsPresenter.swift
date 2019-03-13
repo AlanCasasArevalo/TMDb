@@ -14,13 +14,19 @@ final public class SearchResultsPresenter {
     
     /// The search query
     public let query = Variable("")
-    
+
+    public let detailNavigator: DetailNavigatorProtocol
+
     public let movie = Movie(identifier: 80122,
                       title: "El Capitán Trueno y el Santo Grial",
                       posterPath: "8S0JkayAUgmTnR77qKpo3Ehxtxw.jpg",
                       backdropPath: "46jNSA5xNm3dEKUwPyargoI0GJG.jpg",
                       releaseDate: DateFormatter().date(from: "2011-10-07T10:44:00+0000"),
                       genreIdentifiers: [12])
+    
+    public init (detailNavigator: DetailNavigatorProtocol){
+        self.detailNavigator = detailNavigator
+    }
     
     /// The search results
     public lazy var searchResults: Observable<[SearchResult]> = Observable
@@ -31,5 +37,15 @@ final public class SearchResultsPresenter {
     /// Called by the view when the user selects a search result
     public func didSelect(searchResult: SearchResult) {
         // TODO: implement
+
+        switch searchResult {
+        case .movie(let movie):
+            detailNavigator.showDetail(identifier: movie.identifier, mediaType: .movie)
+        case .show(let show):
+            detailNavigator.showDetail(identifier: show.identifier, mediaType: .show)
+        case .person(let person):
+            detailNavigator.showDetail(identifier: person.identifier, mediaType: .person)
+        }
+        
     }
 }

@@ -20,6 +20,7 @@ struct Constants {
     let POSTER_STRIP_VIEW_CONSTANTS = PosterStripViewConstants()
     let POSTER_STRIP_LAYOUT_CONSTANTS = PosterStripLayoutConstans()
     let FEATURED_VIEW_LITERAL = FeaturedViewLiteral()
+    let SEARCH_CONTROLLER_CONSTANTS = SearchControllerConstants()
 }
 
 struct BaseUrls {
@@ -50,4 +51,8 @@ struct PosterStripLayoutConstans {
     let itemSize = CGSize(width: 96, height: 186)
     let minimumLineSpacing: CGFloat = 16
     let sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+}
+
+struct SearchControllerConstants {
+    let placeHolderTitle = "Search"
 }

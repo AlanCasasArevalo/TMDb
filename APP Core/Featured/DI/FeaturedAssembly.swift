@@ -11,10 +11,12 @@ import Foundation
 public class FeaturedAssembly {
     public let imageLoadingAssembly: ImageLoadingAssembly
     public let detailAssembly: DetailsAssembly
+    public let searchAssembly: SearchAssembly
     
-    public init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly) {
+    public init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly, searchAssembly: SearchAssembly) {
         self.imageLoadingAssembly = imageLoadingAssembly
         self.detailAssembly = detailAssembly
+        self.searchAssembly = searchAssembly
     }
     
     public func cardPresenter() -> CardPresenter {
@@ -26,6 +28,6 @@ public class FeaturedAssembly {
     }
     
     public func viewController() -> UIViewController {
-        return FeaturedViewController(featurePresenter: featuredPresenter(), cardPresenter: cardPresenter())
+        return FeaturedViewController(featurePresenter: featuredPresenter(), cardPresenter: cardPresenter(), searchNavigatorProtocol: searchAssembly.searchNavigatorProtocol())
     }
 }
