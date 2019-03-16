@@ -8,6 +8,6 @@
 
 import Foundation
 
-public final class WebServiceAssembly {
-    public lazy var webService = WebService(configuration: .default)
+final class WebServiceAssembly {
+    lazy var webService = WebService(configuration: .default)
 }

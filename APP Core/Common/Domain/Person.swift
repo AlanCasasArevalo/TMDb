@@ -8,13 +8,13 @@
 
 import Foundation
 
-public struct Person: Decodable {
+struct Person: Decodable {
     let identifier: Int64
     let name: String
     let profilePath: String?
     let knownFor: [Media]?
     
-    public  enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case identifier = "id"
         case name
         case profilePath = "profile_path"

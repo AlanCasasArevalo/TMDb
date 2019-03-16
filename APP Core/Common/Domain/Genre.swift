@@ -9,28 +9,28 @@
 import Foundation
 
 
-public struct Genre: Decodable {
-    public let identifier: Int
-    public let name: String
+struct Genre: Decodable {
+    let identifier: Int
+    let name: String
     
-    public  enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case identifier = "id"
         case name
     }
 }
 
 extension Genre {
-    public static func name(forIdentifier identifier: Int) -> String? {
+    static func name(forIdentifier identifier: Int) -> String? {
         return Genre.bundled[identifier]?.name
     }
     
-    public static func names(forIdentifiers identifiers: [Int]) -> [String] {
+    static func names(forIdentifiers identifiers: [Int]) -> [String] {
         return identifiers.compactMap { Genre.bundled[$0]?.name }
     }
 }
 
-public  extension Genre {
-    public static var bundled: [Int: Genre] = {
+extension Genre {
+    static var bundled: [Int: Genre] = {
         class Dummy {}
         
         let bundle = Bundle(for: Dummy.self)

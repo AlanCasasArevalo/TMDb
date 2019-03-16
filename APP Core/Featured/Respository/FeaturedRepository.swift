@@ -8,27 +8,27 @@
 
 import RxSwift
 
-public protocol FeaturedRepositoryProtocol {
+protocol FeaturedRepositoryProtocol {
     func movieNowPlaying(region: String) -> Observable<[Movie]>
     func showOnTheAir() -> Observable<[Show]>
 }
 
-public class FeaturedRepository: FeaturedRepositoryProtocol {
+class FeaturedRepository: FeaturedRepositoryProtocol {
     
-    public let webService: WebService
+    let webService: WebService
     
-    public init (webService:WebService) {
+    init (webService:WebService) {
         self.webService = webService
     }
     
-    public func movieNowPlaying(region: String) -> Observable<[Movie]> {
+    func movieNowPlaying(region: String) -> Observable<[Movie]> {
         return webService.loadGenericFromApi(type: Page<Movie>.self, endpoint: .moviesNowPlaying(region: region, page: 1))
             .map {
                 $0.results
             }
     }
     
-    public func showOnTheAir() -> Observable<[Show]> {
+    func showOnTheAir() -> Observable<[Show]> {
         return webService.loadGenericFromApi(type: Page<Show>.self, endpoint: .showsOnTheAir(page: 1))
             .map {
                 $0.results

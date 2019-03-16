@@ -9,10 +9,10 @@
 import RxSwift
 import RxCocoa
 
-public class DetailHeaderPresenter {
-    public let imageRepositoryProtocol: ImageRepositoryProtocol
+class DetailHeaderPresenter {
+    let imageRepositoryProtocol: ImageRepositoryProtocol
     
-    public init(imageRepositoryProtocol: ImageRepositoryProtocol) {
+    init(imageRepositoryProtocol: ImageRepositoryProtocol) {
         self.imageRepositoryProtocol = imageRepositoryProtocol
     }
     

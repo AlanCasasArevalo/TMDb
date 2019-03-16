@@ -9,7 +9,7 @@
 import Foundation
 
 
-public protocol DetailPresenterProtocol: class {
+protocol DetailPresenterProtocol: class {
     weak var view: DetailViewProtocol? { get set }
     
     func didLoad()

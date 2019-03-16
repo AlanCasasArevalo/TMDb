@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Movie: Decodable {
+struct Movie: Decodable {
     let identifier: Int64
     let title: String
     let posterPath: String?
@@ -16,7 +16,7 @@ public struct Movie: Decodable {
     let releaseDate: Date?
     let genreIdentifiers: [Int]?
     
-    public  enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case identifier = "id"
         case title
         case posterPath = "poster_path"
@@ -24,7 +24,7 @@ public struct Movie: Decodable {
         case releaseDate = "release_date"
         case genreIdentifiers = "genre_ids"
     }
-    public init(identifier: Int64, title: String,posterPath: String?, backdropPath: String?, releaseDate: Date?, genreIdentifiers: [Int]?){
+    init(identifier: Int64, title: String,posterPath: String?, backdropPath: String?, releaseDate: Date?, genreIdentifiers: [Int]?){
         self.identifier = identifier
         self.title = title
         self.posterPath = posterPath

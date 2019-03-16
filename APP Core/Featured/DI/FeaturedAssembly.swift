@@ -8,22 +8,22 @@
 
 import Foundation
 
-public class FeaturedAssembly {
-    public let imageLoadingAssembly: ImageLoadingAssembly
-    public let detailAssembly: DetailsAssembly
-    public let searchAssembly: SearchAssembly
+final public class FeaturedAssembly {
+    private let imageLoadingAssembly: ImageLoadingAssembly
+    private let detailAssembly: DetailsAssembly
+    private let searchAssembly: SearchAssembly
     
-    public init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly, searchAssembly: SearchAssembly) {
+    init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly, searchAssembly: SearchAssembly) {
         self.imageLoadingAssembly = imageLoadingAssembly
         self.detailAssembly = detailAssembly
         self.searchAssembly = searchAssembly
     }
     
-    public func cardPresenter() -> CardPresenter {
+    func cardPresenter() -> CardPresenter {
         return CardPresenter(imageRepositoryProtocol: imageLoadingAssembly.imageRepository, dateFormatter: DateFormatter())
     }
     
-    public func featuredPresenter() -> FeaturedPresenter {
+    func featuredPresenter() -> FeaturedPresenter {
         return FeaturedPresenter(detailNavigator: detailAssembly.detailNavigator())
     }
     

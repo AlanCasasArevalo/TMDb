@@ -8,18 +8,18 @@
 
 import Foundation
 
-public enum SearchResult {
+enum SearchResult {
     case movie(Movie)
     case show(Show)
     case person(Person)
 }
 
 extension SearchResult: Decodable {
-    public enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case mediaType = "media_type"
     }
     
-    public init(from decoder: Decoder) throws {
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let mediaType = try container.decode(String.self, forKey: .mediaType)
         

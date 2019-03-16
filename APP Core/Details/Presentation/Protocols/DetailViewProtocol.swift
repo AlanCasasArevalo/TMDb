@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol DetailViewProtocol: class{
+protocol DetailViewProtocol: class{
     func setLoading(loading: Bool)
     func updateView(sections: [DetailSection])
 }

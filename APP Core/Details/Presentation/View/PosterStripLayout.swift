@@ -9,9 +9,9 @@
 import Foundation
 
 
-final public class PosterStripLayout: UICollectionViewFlowLayout {
+final class PosterStripLayout: UICollectionViewFlowLayout {
     
-    public override func prepare() {
+    override func prepare() {
         guard let collectionView = collectionView else { return }
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.scrollsToTop = false
@@ -22,7 +22,7 @@ final public class PosterStripLayout: UICollectionViewFlowLayout {
         sectionInset = CONSTANTS.POSTER_STRIP_LAYOUT_CONSTANTS.sectionInset
     }
     
-    override public func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
         guard let collectionView = collectionView else { return proposedContentOffset }
 
         let targetRect = CGRect(origin: CGPoint(x: proposedContentOffset.x, y: 0), size: collectionView.bounds.size)

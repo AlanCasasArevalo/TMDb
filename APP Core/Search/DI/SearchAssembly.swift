@@ -8,25 +8,25 @@
 
 import Foundation
 
-final public class SearchAssembly {
+final class SearchAssembly {
     
-    public let imageLoadingAssembly: ImageLoadingAssembly
-    public let detailAssembly: DetailsAssembly
+    let imageLoadingAssembly: ImageLoadingAssembly
+    let detailAssembly: DetailsAssembly
     
-    public init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly) {
+    init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly) {
         self.imageLoadingAssembly = imageLoadingAssembly
         self.detailAssembly = detailAssembly
     }
     
-    public func searchResultCellPresenter() -> SearchResultCellPresenter{
+    func searchResultCellPresenter() -> SearchResultCellPresenter{
         return SearchResultCellPresenter(imageRepositoryProtocol: imageLoadingAssembly.imageRepository, dateFormatter: DateFormatter())
     }
 
-    public func presenter() -> SearchResultsPresenter{
+    func presenter() -> SearchResultsPresenter{
         return SearchResultsPresenter(detailNavigator: detailAssembly.detailNavigator())
     }
     
-    public func searchNavigatorProtocol () -> SearchNavigatorProtocol {
+    func searchNavigatorProtocol () -> SearchNavigatorProtocol {
         return PhoneSearchNavigator(viewControllerProvider: self)
     }
     

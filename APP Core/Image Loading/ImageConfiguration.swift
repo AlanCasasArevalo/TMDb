@@ -8,16 +8,16 @@
 
 import Foundation
 
-public struct ImageConfiguration: Decodable {
-    public struct Images: Decodable {
-        public let baseURL: URL
+struct ImageConfiguration: Decodable {
+    struct Images: Decodable {
+        let baseURL: URL
         
         private enum CodingKeys: String, CodingKey {
             case baseURL = "secure_base_url"
         }
     }
     
-    public let images: Images
+    let images: Images
 }
 
 extension ImageConfiguration {
