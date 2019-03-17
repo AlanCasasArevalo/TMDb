@@ -1,4 +1,4 @@
-import APP_Core
+@testable import APP_Core
 import RxSwift
 import PlaygroundSupport
 
@@ -23,7 +23,8 @@ webService.loadGenericFromApi(type: ImageConfiguration.self, endpoint: .configur
     .subscribe(onNext: { print($0.images.baseURL) })
     .disposed(by: disposeBag)
 
-webService.loadGenericFromApi(type: Page<Show>.self, endpoint: .sho)
+
+webService.loadGenericFromApi(type: Page<Show>.self, endpoint: .showsOnTheAir(page: 1))
     .subscribe(onNext: {
         print($0)
     })
