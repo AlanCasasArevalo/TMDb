@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol FeaturedViewProtocol: class {
+protocol FeaturedViewProtocol: class {
     var title: String? { get set }
     func setMoviesHeaderTitle(title: String)
     func setShowsHeaderTitle(title: String)
@@ -17,7 +17,7 @@ public protocol FeaturedViewProtocol: class {
     func updateView(with shows: [Show])
 }
 
-public class FeaturedPresenter {
+class FeaturedPresenter {
     weak var featureViewProtocol: FeaturedViewProtocol?
     private let detailNavigator: DetailNavigatorProtocol
     
@@ -42,7 +42,7 @@ public class FeaturedPresenter {
     }
 }
 
-extension FeaturedPresenter {
+private extension FeaturedPresenter {
     func addFakeContent() {
         let shows = [
             Show(identifier: 1413,

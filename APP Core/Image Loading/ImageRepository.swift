@@ -12,12 +12,12 @@ public protocol ImageRepositoryProtocol {
     func imageFromApi(path: String, size: ImageSize) -> Observable<UIImage>
 }
 
-public final class ImageRepository: ImageRepositoryProtocol {
+final internal class ImageRepository: ImageRepositoryProtocol {
     
-    public var imageBaseURL: Observable<URL>
-    public let imageManager: ImageManagerProtocol
+    var imageBaseURL: Observable<URL>
+    let imageManager: ImageManagerProtocol
     
-    public init ( webService: WebService, imageManager: ImageManagerProtocol ) {
+    init ( webService: WebService, imageManager: ImageManagerProtocol ) {
         self.imageBaseURL = webService.loadGenericFromApi(type: ImageConfiguration.self, endpoint: .configuration)
             .catchErrorJustReturn(.default)
             .map({ imageConfiguration in
@@ -28,7 +28,7 @@ public final class ImageRepository: ImageRepositoryProtocol {
         self.imageManager = imageManager
     }
     
-    public func imageFromApi(path: String, size: ImageSize) -> Observable<UIImage> {
+    func imageFromApi(path: String, size: ImageSize) -> Observable<UIImage> {
         let imageManager = self.imageManager
         
         return imageBaseURL.map({ url  in

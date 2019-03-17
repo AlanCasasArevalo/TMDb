@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct DetailHeader {
+struct DetailHeader {
     let title: String
     let metadata: String
     let posterPath: String?

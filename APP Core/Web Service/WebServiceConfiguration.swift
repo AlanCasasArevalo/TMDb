@@ -8,14 +8,14 @@
 
 import Foundation
 
-public struct WebServiceConfiguration {
+internal struct WebServiceConfiguration {
     
-    public let language: String
-    public let apiKey: String
+    let language: String
+    let apiKey: String
     
-    public class Dummy {}
+    private class Dummy {}
     
-    public static let `default` =
+    static let `default` =
         WebServiceConfiguration(language: Bundle.main.preferredLocalizations[0],
                                 apiKey: Bundle(for: WebServiceConfiguration.Dummy.self) .infoDictionary?["TMDB_API_KEY"] as? String ?? "")
     

@@ -8,11 +8,11 @@
 
 import Foundation
 
-final public class DetailsAssembly {
-    public let imageLoadingAssembly: ImageLoadingAssembly
-    public let navigationController: UINavigationController
+final class DetailsAssembly {
+    let imageLoadingAssembly: ImageLoadingAssembly
+    let navigationController: UINavigationController
     
-    public init (imageLoadingAssembly: ImageLoadingAssembly, navigationController: UINavigationController) {
+    init (imageLoadingAssembly: ImageLoadingAssembly, navigationController: UINavigationController) {
         self.imageLoadingAssembly = imageLoadingAssembly
         self.navigationController = navigationController
     }
@@ -21,7 +21,7 @@ final public class DetailsAssembly {
         return DetailHeaderPresenter(imageRepositoryProtocol: imageLoadingAssembly.imageRepository)
     }
     
-    public func posterStripPresenter() -> PosterStripPresenter {
+    func posterStripPresenter() -> PosterStripPresenter {
         return PosterStripPresenter(imageRepositoryProtocol: imageLoadingAssembly.imageRepository)
     }
 
@@ -34,7 +34,7 @@ final public class DetailsAssembly {
 extension DetailsAssembly : DetailViewControllerProviderProtocol{
     
     // FIXME: Temporary we should change this for real DetailPresenter
-    private class DummyDetailPresenter: DetailPresenterProtocol {
+    class DummyDetailPresenter: DetailPresenterProtocol {
         var view: DetailViewProtocol?
         func didLoad() {}
         func didSelect(item: PosterStripItem) {}

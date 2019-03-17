@@ -10,12 +10,12 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-public class CardPresenter {
+class CardPresenter {
     
-    public let imageRepositoryProtocol: ImageRepositoryProtocol
-    public let dateFormatter: DateFormatter
+    let imageRepositoryProtocol: ImageRepositoryProtocol
+    let dateFormatter: DateFormatter
     
-    public init(imageRepositoryProtocol: ImageRepositoryProtocol, dateFormatter: DateFormatter ){
+    init(imageRepositoryProtocol: ImageRepositoryProtocol, dateFormatter: DateFormatter ){
         self.imageRepositoryProtocol = imageRepositoryProtocol
         self.dateFormatter = dateFormatter
     }
@@ -59,7 +59,7 @@ public class CardPresenter {
     }
 }
 
-extension CardPresenter {
+private extension CardPresenter {
     func bindBackdrop(path: String?, cardView: CardView) {
         guard let path = path else { return }
         

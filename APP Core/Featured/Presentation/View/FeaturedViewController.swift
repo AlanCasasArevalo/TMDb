@@ -10,30 +10,30 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-public class FeaturedViewController: UIViewController {
+class FeaturedViewController: UIViewController {
     
     @IBOutlet weak var moviesLabel: UILabel!
     @IBOutlet weak var showsLabel: UILabel!
     @IBOutlet weak var moviesStackView: UIStackView!
     @IBOutlet weak var showsStackView: UIStackView!
 
-    public let featurePresenter: FeaturedPresenter
-    public let cardPresenter: CardPresenter
-    public let searchNavigatorProtocol: SearchNavigatorProtocol
-    public let disposeBag = DisposeBag()
+    private let featurePresenter: FeaturedPresenter
+    private let cardPresenter: CardPresenter
+    private let searchNavigatorProtocol: SearchNavigatorProtocol
+    private let disposeBag = DisposeBag()
 
-    public init(featurePresenter: FeaturedPresenter, cardPresenter: CardPresenter, searchNavigatorProtocol: SearchNavigatorProtocol){
+    init(featurePresenter: FeaturedPresenter, cardPresenter: CardPresenter, searchNavigatorProtocol: SearchNavigatorProtocol){
         self.featurePresenter = featurePresenter
         self.cardPresenter = cardPresenter
         self.searchNavigatorProtocol = searchNavigatorProtocol
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         searchNavigatorProtocol.installSearch(viewController: self)
@@ -45,15 +45,15 @@ public class FeaturedViewController: UIViewController {
 
 
 extension FeaturedViewController: FeaturedViewProtocol{
-    public func setMoviesHeaderTitle(title: String) {
+    func setMoviesHeaderTitle(title: String) {
         moviesLabel.text = title
     }
     
-    public func setShowsHeaderTitle(title: String) {
+    func setShowsHeaderTitle(title: String) {
         showsLabel.text = title
     }
     
-    public func updateView(with movies: [Movie]) {
+    func updateView(with movies: [Movie]) {
         moviesStackView.arrangedSubviews.forEach { view in
             view.removeFromSuperview()
         }
@@ -77,7 +77,7 @@ extension FeaturedViewController: FeaturedViewProtocol{
         }
     }
     
-    public func updateView(with shows: [Show]) {
+    func updateView(with shows: [Show]) {
         showsStackView.arrangedSubviews.forEach { view in
             view.removeFromSuperview()
         }

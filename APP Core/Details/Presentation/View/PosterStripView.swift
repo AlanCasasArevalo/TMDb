@@ -10,10 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final public class PosterStripView : UIView, NibLoadableView {
+final class PosterStripView : UIView, NibLoadableView {
     
-    @IBOutlet public var titleLabel: UILabel!
-    @IBOutlet public var collectionView: UICollectionView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var collectionView: UICollectionView!
 
     
     var title: String {
@@ -35,7 +35,7 @@ final public class PosterStripView : UIView, NibLoadableView {
     
     let disposeBag = DisposeBag()
     
-    public override func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
         
         collectionView.register(PosterStripCollectionCell.self)
@@ -50,7 +50,7 @@ final public class PosterStripView : UIView, NibLoadableView {
         
     }
     
-    override public var intrinsicContentSize: CGSize {
+    override var intrinsicContentSize: CGSize {
         return CGSize(width: UIViewNoIntrinsicMetric, height: CONSTANTS.POSTER_STRIP_VIEW_CONSTANTS.cgSizeHeight)
     }
     

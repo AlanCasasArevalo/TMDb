@@ -9,14 +9,14 @@
 import UIKit
 import RxSwift
 
-public class PosterStripCollectionCell: UICollectionViewCell, ReusableView, NibLoadableView {
+class PosterStripCollectionCell: UICollectionViewCell, ReusableView, NibLoadableView {
     @IBOutlet weak var posterStripTitleLabel: UILabel!
     @IBOutlet weak var posterStripMetadataLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
     
-    public var disposeBag = DisposeBag()
+    private(set) var disposeBag = DisposeBag()
     
-    override public func prepareForReuse() {
+    override func prepareForReuse() {
         super.prepareForReuse()
         posterImageView.image = nil
         disposeBag = DisposeBag()

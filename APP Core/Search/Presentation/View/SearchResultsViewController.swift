@@ -13,23 +13,23 @@ protocol SearchResultsViewControllerProvider: class {
     func searchResultsViewController () -> SearchResultsViewController
 }
 
-public class SearchResultsViewController: UITableViewController {
+class SearchResultsViewController: UITableViewController {
     
-    public let presenter: SearchResultsPresenter
-    public let resultCellPresenter: SearchResultCellPresenter
-    public let disposeBag = DisposeBag()
+    private let presenter: SearchResultsPresenter
+    private let resultCellPresenter: SearchResultCellPresenter
+    private let disposeBag = DisposeBag()
     
-    public init(presenter: SearchResultsPresenter, resultCellPresenter: SearchResultCellPresenter) {
+    init(presenter: SearchResultsPresenter, resultCellPresenter: SearchResultCellPresenter) {
         self.presenter = presenter
         self.resultCellPresenter = resultCellPresenter
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
         tableView.dataSource = nil
@@ -38,15 +38,15 @@ public class SearchResultsViewController: UITableViewController {
     
 }
 
-extension SearchResultsViewController {
+private extension SearchResultsViewController {
     
-    public func setupView() {
+    func setupView() {
         tableView.register(SearchResultCell.self)
         tableView.separatorInset = CONSTANTS.TABLE_VIEW_CONSTANTS.separatorInset
         tableView.rowHeight = CONSTANTS.TABLE_VIEW_CONSTANTS.rowHeight
     }
 
-    public func bindPresenters() {
+    func bindPresenters() {
         presenter.searchResults
             .bind(to: tableView.rx.items) { [weak self] tableView, index, searchResult in
                 let cell = tableView.dequeueReusableCell(SearchResultCell.self)
@@ -69,7 +69,7 @@ extension SearchResultsViewController {
 }
 
 extension SearchResultsViewController : UISearchResultsUpdating{
-    public func updateSearchResults(for searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
         presenter.query.value = searchController.searchBar.text ?? ""
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct MovieDetail: Decodable {
+struct MovieDetail: Decodable {
     let backdropPath: String?
     let identifier: Int64
     let overview: String?
@@ -18,7 +18,7 @@ public struct MovieDetail: Decodable {
     let title: String
     let credits: Credits?
     
-    public enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case backdropPath = "backdrop_path"
         case identifier = "id"
         case overview

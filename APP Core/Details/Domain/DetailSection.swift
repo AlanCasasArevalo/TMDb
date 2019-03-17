@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum DetailSection {
+enum DetailSection {
     case header(DetailHeader)
     case about(title: String, detail: String)
     case posterStrip(title: String, items: [PosterStripItem])

@@ -8,15 +8,15 @@
 
 import Foundation
 
-public struct Show: Decodable {
+struct Show: Decodable {
     let identifier: Int64
     let title: String
     let posterPath: String?
     let backdropPath: String?
-    let firstAirDate: Date?
+    let firstAirDate: String?
     let genreIdentifiers: [Int]?
     
-    public  enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case identifier = "id"
         case title = "name"
         case posterPath = "poster_path"

@@ -12,7 +12,7 @@ protocol DetailViewControllerProviderProtocol: class {
     func detailViewController ( identifier: Int64, mediaType: MediaType ) -> UIViewController
 }
 
-public class DetailViewController: UIViewController {
+class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailScrollView: UIScrollView!
     @IBOutlet weak var detailStackView: UIStackView!
@@ -20,11 +20,11 @@ public class DetailViewController: UIViewController {
     
     
     
-    public let detailPresenter: DetailPresenterProtocol
-    public let detailHeaderPresenter: DetailHeaderPresenter
-    public let posterStripPresenter: PosterStripPresenter
+    let detailPresenter: DetailPresenterProtocol
+    let detailHeaderPresenter: DetailHeaderPresenter
+    let posterStripPresenter: PosterStripPresenter
     
-    public init(detailPresenter: DetailPresenterProtocol, detailHeaderPresenter: DetailHeaderPresenter, posterStripPresenter: PosterStripPresenter){
+    init(detailPresenter: DetailPresenterProtocol, detailHeaderPresenter: DetailHeaderPresenter, posterStripPresenter: PosterStripPresenter){
         self.detailPresenter = detailPresenter
         self.detailHeaderPresenter = detailHeaderPresenter
         self.posterStripPresenter = posterStripPresenter
@@ -32,11 +32,11 @@ public class DetailViewController: UIViewController {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         detailPresenter.view = self
@@ -46,7 +46,7 @@ public class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: DetailViewProtocol {
-    public func setLoading(loading: Bool) {
+    func setLoading(loading: Bool) {
         if loading {
             detailScrollView.isHidden = true
             loadingView.startAnimating()
@@ -56,7 +56,7 @@ extension DetailViewController: DetailViewProtocol {
         }
     }
     
-    public func updateView(sections: [DetailSection]) {
+    func updateView(sections: [DetailSection]) {
         detailStackView.arrangedSubviews.forEach {
             $0.removeFromSuperview()
         }

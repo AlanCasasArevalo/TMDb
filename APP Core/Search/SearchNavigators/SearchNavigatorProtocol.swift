@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol SearchNavigatorProtocol {
+protocol SearchNavigatorProtocol {
     func installSearch(viewController: UIViewController)
 }

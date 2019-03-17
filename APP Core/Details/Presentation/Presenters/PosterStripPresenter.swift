@@ -9,14 +9,14 @@
 import RxSwift
 import RxCocoa
 
-final public class PosterStripPresenter {
-    public let imageRepositoryProtocol: ImageRepositoryProtocol
+final class PosterStripPresenter {
+    let imageRepositoryProtocol: ImageRepositoryProtocol
     
-    public init (imageRepositoryProtocol: ImageRepositoryProtocol) {
+    init (imageRepositoryProtocol: ImageRepositoryProtocol) {
         self.imageRepositoryProtocol = imageRepositoryProtocol
     }
     
-    public func present(item:PosterStripItem,  cell: PosterStripCollectionCell){
+    func present(item:PosterStripItem,  cell: PosterStripCollectionCell){
         
         bindPoster(path: item.posterPath, cell: cell)
         
@@ -26,7 +26,7 @@ final public class PosterStripPresenter {
     
 }
 
-extension PosterStripPresenter {
+private extension PosterStripPresenter {
     func bindPoster (path: String?, cell: PosterStripCollectionCell){
         guard let path = path else { return }
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PosterStripItem {
+struct PosterStripItem {
     let identifier: Int64
     let mediaType: MediaType
     

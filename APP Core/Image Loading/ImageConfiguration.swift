@@ -20,6 +20,6 @@ public struct ImageConfiguration: Decodable {
     public let images: Images
 }
 
-extension ImageConfiguration {
+public extension ImageConfiguration {
     static let `default` = ImageConfiguration(images: Images(baseURL: URL(string: CONSTANTS.CALLS.BASE_IMAGE_URL)!))
 }

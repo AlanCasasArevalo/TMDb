@@ -9,10 +9,10 @@
 import RxSwift
 import RxCocoa
 
-public class DetailHeaderPresenter {
-    public let imageRepositoryProtocol: ImageRepositoryProtocol
+class DetailHeaderPresenter {
+    let imageRepositoryProtocol: ImageRepositoryProtocol
     
-    public init(imageRepositoryProtocol: ImageRepositoryProtocol) {
+    init(imageRepositoryProtocol: ImageRepositoryProtocol) {
         self.imageRepositoryProtocol = imageRepositoryProtocol
     }
     
@@ -26,7 +26,7 @@ public class DetailHeaderPresenter {
     
 }
 
-extension DetailHeaderPresenter {
+private extension DetailHeaderPresenter {
     func bindImageIntoView ( path: String?, view: DetailHeaderView, imageSize: ImageSize ) {
         guard let path = path else { return }
         

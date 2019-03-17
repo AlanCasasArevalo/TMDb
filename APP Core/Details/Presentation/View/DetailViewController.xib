@@ -29,9 +29,8 @@
                         <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="200" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-EQ-hDF">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         </stackView>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="GS5-ZC-ztI">
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="GS5-ZC-ztI">
                             <rect key="frame" x="169.5" y="305.5" width="37" height="37"/>
-                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </activityIndicatorView>
                     </subviews>
                     <constraints>

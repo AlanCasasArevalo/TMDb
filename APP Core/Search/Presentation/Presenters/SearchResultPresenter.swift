@@ -9,16 +9,16 @@
 import RxSwift
 import RxCocoa
 
-public final class SearchResultCellPresenter {
-    public let imageRepositoryProtocol: ImageRepositoryProtocol
-    public let dateFormatter: DateFormatter
+final class SearchResultCellPresenter {
+    private let imageRepositoryProtocol: ImageRepositoryProtocol
+    private let dateFormatter: DateFormatter
     
-    public init( imageRepositoryProtocol: ImageRepositoryProtocol, dateFormatter: DateFormatter){
+    init( imageRepositoryProtocol: ImageRepositoryProtocol, dateFormatter: DateFormatter){
         self.imageRepositoryProtocol = imageRepositoryProtocol
         self.dateFormatter = dateFormatter
     }
     
-    public func present(searchResult: SearchResult, cell: SearchResultCell) {
+    func present(searchResult: SearchResult, cell: SearchResultCell) {
         switch searchResult {
         case let .movie(movie):
             present(movie: movie, in: cell)
@@ -31,7 +31,7 @@ public final class SearchResultCellPresenter {
     
 }
 
-extension SearchResultCellPresenter {
+private extension SearchResultCellPresenter {
     
     func present(movie: Movie, in cell: SearchResultCell) {
         presentImage(path: movie.posterPath, cell: cell)
