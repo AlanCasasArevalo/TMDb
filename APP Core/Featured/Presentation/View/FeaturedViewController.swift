@@ -17,10 +17,10 @@ class FeaturedViewController: UIViewController {
     @IBOutlet weak var moviesStackView: UIStackView!
     @IBOutlet weak var showsStackView: UIStackView!
 
-    let featurePresenter: FeaturedPresenter
-    let cardPresenter: CardPresenter
-    let searchNavigatorProtocol: SearchNavigatorProtocol
-    let disposeBag = DisposeBag()
+    private let featurePresenter: FeaturedPresenter
+    private let cardPresenter: CardPresenter
+    private let searchNavigatorProtocol: SearchNavigatorProtocol
+    private let disposeBag = DisposeBag()
 
     init(featurePresenter: FeaturedPresenter, cardPresenter: CardPresenter, searchNavigatorProtocol: SearchNavigatorProtocol){
         self.featurePresenter = featurePresenter

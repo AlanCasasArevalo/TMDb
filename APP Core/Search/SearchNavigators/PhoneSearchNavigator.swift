@@ -8,9 +8,9 @@
 
 import Foundation
 
-final class PhoneSearchNavigator: SearchNavigatorProtocol {
+final public class PhoneSearchNavigator: SearchNavigatorProtocol {
 
-    private  unowned let viewControllerProvider: SearchResultsViewControllerProvider
+    private unowned let viewControllerProvider: SearchResultsViewControllerProvider
     private var searchController: UISearchController!
 
     init(viewControllerProvider: SearchResultsViewControllerProvider) {

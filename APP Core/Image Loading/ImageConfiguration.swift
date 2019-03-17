@@ -8,18 +8,18 @@
 
 import Foundation
 
-struct ImageConfiguration: Decodable {
-    struct Images: Decodable {
-        let baseURL: URL
+public struct ImageConfiguration: Decodable {
+    public struct Images: Decodable {
+        public let baseURL: URL
         
         private enum CodingKeys: String, CodingKey {
             case baseURL = "secure_base_url"
         }
     }
     
-    let images: Images
+    public let images: Images
 }
 
-extension ImageConfiguration {
+public extension ImageConfiguration {
     static let `default` = ImageConfiguration(images: Images(baseURL: URL(string: CONSTANTS.CALLS.BASE_IMAGE_URL)!))
 }

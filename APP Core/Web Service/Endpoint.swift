@@ -8,17 +8,17 @@
 
 import Foundation
 
-enum HTTPMethod: String {
+private enum HTTPMethod: String {
     case get = "GET"
 }
 
-enum Endpoint {
+internal enum Endpoint {
     case configuration
     case moviesNowPlaying(region: String, page: Int)
     case showsOnTheAir(page: Int)
 }
 
-extension Endpoint {
+internal extension Endpoint {
     func request (with baseURL: URL, parameters: [String: String]) -> URLRequest{
         let url = baseURL.appendingPathComponent(path)
         var newParameters = self.parameters
@@ -33,7 +33,7 @@ extension Endpoint {
     }
 }
 
-extension Endpoint {
+private extension Endpoint {
     var method: HTTPMethod{
         return .get
     }

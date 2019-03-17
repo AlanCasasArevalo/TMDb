@@ -16,7 +16,7 @@ class SearchResultCell: UITableViewCell, ReusableView, NibLoadableView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var metaDataLabel: UILabel!
     
-    var disposeBag = DisposeBag()
+    private(set) var disposeBag = DisposeBag()
     
     override func prepareForReuse() {
         super.prepareForReuse()

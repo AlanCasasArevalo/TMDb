@@ -26,7 +26,7 @@ final class PosterStripPresenter {
     
 }
 
-extension PosterStripPresenter {
+private extension PosterStripPresenter {
     func bindPoster (path: String?, cell: PosterStripCollectionCell){
         guard let path = path else { return }
         

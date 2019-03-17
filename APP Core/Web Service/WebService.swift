@@ -8,12 +8,12 @@
 
 import RxSwift
 
-enum WebServiceError: Error {
+internal enum WebServiceError: Error {
     case badStatus(Int, Data)
     case api(Int, String)
 }
 
-struct Status: Decodable {
+private struct Status: Decodable {
     let code: Int
     let message: String
     
@@ -23,12 +23,12 @@ struct Status: Decodable {
     }
 }
 
-final class WebService {
+final internal class WebService {
     
-    let configuration: WebServiceConfiguration
-    let session = URLSession(configuration: .default)
-    let baseURL = URL(string: CONSTANTS.CALLS.BASE_URL)!
-    let decoder = JSONDecoder()
+    private let configuration: WebServiceConfiguration
+    private let session = URLSession(configuration: .default)
+    private let baseURL = URL(string: CONSTANTS.CALLS.BASE_URL)!
+    private let decoder = JSONDecoder()
     
     init(configuration: WebServiceConfiguration = .default){
         self.configuration = configuration
@@ -51,7 +51,7 @@ final class WebService {
     }
 }
 
-extension Reactive where Base: URLSession {
+private extension Reactive where Base: URLSession {
     func dataFromApiObservable(request: URLRequest) -> Observable<Data> {
             
         return Observable.create { observer in

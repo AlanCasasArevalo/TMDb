@@ -15,9 +15,9 @@ protocol SearchResultsViewControllerProvider: class {
 
 class SearchResultsViewController: UITableViewController {
     
-    let presenter: SearchResultsPresenter
-    let resultCellPresenter: SearchResultCellPresenter
-    let disposeBag = DisposeBag()
+    private let presenter: SearchResultsPresenter
+    private let resultCellPresenter: SearchResultCellPresenter
+    private let disposeBag = DisposeBag()
     
     init(presenter: SearchResultsPresenter, resultCellPresenter: SearchResultCellPresenter) {
         self.presenter = presenter
@@ -38,7 +38,7 @@ class SearchResultsViewController: UITableViewController {
     
 }
 
-extension SearchResultsViewController {
+private extension SearchResultsViewController {
     
     func setupView() {
         tableView.register(SearchResultCell.self)

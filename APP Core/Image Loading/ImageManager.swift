@@ -9,7 +9,7 @@
 import RxSwift
 import Kingfisher
 
-protocol ImageManagerProtocol {
+internal protocol ImageManagerProtocol {
     func imageFromURL(withURL url: URL) -> Observable<UIImage>
 }
 

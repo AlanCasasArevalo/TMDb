@@ -42,7 +42,7 @@ class FeaturedPresenter {
     }
 }
 
-extension FeaturedPresenter {
+private extension FeaturedPresenter {
     func addFakeContent() {
         let shows = [
             Show(identifier: 1413,

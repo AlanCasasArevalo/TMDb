@@ -8,11 +8,11 @@
 
 import RxSwift
 
-protocol ImageRepositoryProtocol {
+public protocol ImageRepositoryProtocol {
     func imageFromApi(path: String, size: ImageSize) -> Observable<UIImage>
 }
 
-final class ImageRepository: ImageRepositoryProtocol {
+final internal class ImageRepository: ImageRepositoryProtocol {
     
     var imageBaseURL: Observable<URL>
     let imageManager: ImageManagerProtocol

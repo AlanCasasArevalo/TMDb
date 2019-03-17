@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ImageSize: String {
+public enum ImageSize: String {
     case w45
     case w92
     case w154

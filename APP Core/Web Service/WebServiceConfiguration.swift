@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct WebServiceConfiguration {
+internal struct WebServiceConfiguration {
     
     let language: String
     let apiKey: String
     
-    class Dummy {}
+    private class Dummy {}
     
     static let `default` =
         WebServiceConfiguration(language: Bundle.main.preferredLocalizations[0],

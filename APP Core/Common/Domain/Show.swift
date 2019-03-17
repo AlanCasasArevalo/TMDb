@@ -13,7 +13,7 @@ struct Show: Decodable {
     let title: String
     let posterPath: String?
     let backdropPath: String?
-    let firstAirDate: Date?
+    let firstAirDate: String?
     let genreIdentifiers: [Int]?
     
     enum CodingKeys: String, CodingKey {

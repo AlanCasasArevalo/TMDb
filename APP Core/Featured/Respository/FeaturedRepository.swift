@@ -15,7 +15,7 @@ protocol FeaturedRepositoryProtocol {
 
 class FeaturedRepository: FeaturedRepositoryProtocol {
     
-    let webService: WebService
+    private let webService: WebService
     
     init (webService:WebService) {
         self.webService = webService

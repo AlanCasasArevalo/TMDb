@@ -26,7 +26,7 @@ class DetailHeaderPresenter {
     
 }
 
-extension DetailHeaderPresenter {
+private extension DetailHeaderPresenter {
     func bindImageIntoView ( path: String?, view: DetailHeaderView, imageSize: ImageSize ) {
         guard let path = path else { return }
         

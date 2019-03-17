@@ -14,7 +14,7 @@ class PosterStripCollectionCell: UICollectionViewCell, ReusableView, NibLoadable
     @IBOutlet weak var posterStripMetadataLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
     
-    var disposeBag = DisposeBag()
+    private(set) var disposeBag = DisposeBag()
     
     override func prepareForReuse() {
         super.prepareForReuse()

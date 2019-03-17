@@ -59,7 +59,7 @@ class CardPresenter {
     }
 }
 
-extension CardPresenter {
+private extension CardPresenter {
     func bindBackdrop(path: String?, cardView: CardView) {
         guard let path = path else { return }
         
