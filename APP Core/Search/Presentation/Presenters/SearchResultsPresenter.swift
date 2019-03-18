@@ -21,7 +21,7 @@ final class SearchResultsPresenter {
                       title: "El Capitán Trueno y el Santo Grial",
                       posterPath: "8S0JkayAUgmTnR77qKpo3Ehxtxw.jpg",
                       backdropPath: "46jNSA5xNm3dEKUwPyargoI0GJG.jpg",
-                      releaseDate: DateFormatter().date(from: "2011-10-07T10:44:00+0000"),
+                      releaseDate: "2011-10-07T10:44:00+0000",
                       genreIdentifiers: [12])
     
     init (detailNavigator: DetailNavigatorProtocol){

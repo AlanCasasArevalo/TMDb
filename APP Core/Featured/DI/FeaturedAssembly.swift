@@ -12,11 +12,13 @@ final public class FeaturedAssembly {
     private let imageLoadingAssembly: ImageLoadingAssembly
     private let detailAssembly: DetailsAssembly
     private let searchAssembly: SearchAssembly
-    
-    init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly, searchAssembly: SearchAssembly) {
+    private let webServiceAssembly: WebServiceAssembly
+
+    init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly, searchAssembly: SearchAssembly, webServiceAssembly: WebServiceAssembly) {
         self.imageLoadingAssembly = imageLoadingAssembly
         self.detailAssembly = detailAssembly
         self.searchAssembly = searchAssembly
+        self.webServiceAssembly = webServiceAssembly
     }
     
     func cardPresenter() -> CardPresenter {
@@ -24,7 +26,11 @@ final public class FeaturedAssembly {
     }
     
     func featuredPresenter() -> FeaturedPresenter {
-        return FeaturedPresenter(detailNavigator: detailAssembly.detailNavigator())
+        return FeaturedPresenter(detailNavigator: detailAssembly.detailNavigator(), featuredRepositoryProtocol: featuredRepositoryProtocol())
+    }
+    
+    func featuredRepositoryProtocol() -> FeaturedRepositoryProtocol {
+        return FeaturedRepository(webService: webServiceAssembly.webService)
     }
     
     public func viewController() -> UIViewController {
