@@ -23,10 +23,18 @@ webService.loadGenericFromApi(type: ImageConfiguration.self, endpoint: .configur
     .subscribe(onNext: { print($0.images.baseURL) })
     .disposed(by: disposeBag)
 
-
 webService.loadGenericFromApi(type: Page<Show>.self, endpoint: .showsOnTheAir(page: 1))
     .subscribe(onNext: {
         print($0)
     })
     .disposed(by: disposeBag)
+
+let region = Locale.current.regionCode!
+
+webService.loadGenericFromApi(type: Page<Movie>.self, endpoint: .moviesNowPlaying(region: "ES", page: 1))
+    .subscribe(onNext: {
+        print($0)
+    })
+    .disposed(by: disposeBag)
+
 
