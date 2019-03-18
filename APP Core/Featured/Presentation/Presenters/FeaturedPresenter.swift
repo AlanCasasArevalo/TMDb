@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alan Casas. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
 protocol FeaturedViewProtocol: class {
     var title: String? { get set }
@@ -20,17 +20,21 @@ protocol FeaturedViewProtocol: class {
 class FeaturedPresenter {
     weak var featureViewProtocol: FeaturedViewProtocol?
     private let detailNavigator: DetailNavigatorProtocol
+    private let featuredRepositoryProtocol : FeaturedRepositoryProtocol
+    private let disposeBag = DisposeBag()
     
-    init(detailNavigator: DetailNavigatorProtocol) {
+    init(detailNavigator: DetailNavigatorProtocol, featuredRepositoryProtocol : FeaturedRepositoryProtocol) {
         self.detailNavigator = detailNavigator
+        self.featuredRepositoryProtocol = featuredRepositoryProtocol
     }
     
     func didLoad() {
         featureViewProtocol?.title = NSLocalizedString(CONSTANTS.FEATURED_VIEW_LITERAL.FeatureTitle, comment: "")
         featureViewProtocol?.setShowsHeaderTitle(title: NSLocalizedString(CONSTANTS.FEATURED_VIEW_LITERAL.FeatureShowHeader, comment: ""))
         featureViewProtocol?.setMoviesHeaderTitle(title: NSLocalizedString(CONSTANTS.FEATURED_VIEW_LITERAL.FeatureMovieHeader, comment: ""))
+
+        loadContentsFromApi()
         
-        addFakeContent()
     }
     
     func didSelect(show: Show) {
@@ -43,52 +47,33 @@ class FeaturedPresenter {
 }
 
 private extension FeaturedPresenter {
-    func addFakeContent() {
-        let shows = [
-            Show(identifier: 1413,
-                 title: "American Horror Story",
-                 posterPath: "/gwSzP1cJL2HsBmGStN2vOg3d4Qd.jpg",
-                 backdropPath: "/anDMMvgVV6pTNSxhHgiDPUjc4pH.jpg",
-                 firstAirDate: "",
-                 genreIdentifiers: [18, 9648]),
-            Show(identifier: 1413,
-                 title: "American Horror Story",
-                 posterPath: "/gwSzP1cJL2HsBmGStN2vOg3d4Qd.jpg",
-                 backdropPath: "/anDMMvgVV6pTNSxhHgiDPUjc4pH.jpg",
-                 firstAirDate: "",
-                 genreIdentifiers: [18, 9648]),
-        ]
+    func loadContentsFromApi() {
+        let movieNowPlaying = featuredRepositoryProtocol.movieNowPlaying(region: Locale.current.regionCode!)
+            .map({ movies in
+                // FIXME: Here we could see all movies or shows and we could send sorted array with movies.prefix(8)
+                movies
+            })
         
-        featureViewProtocol?.updateView(with: shows)
+        let showsOnTheAir = featuredRepositoryProtocol.showOnTheAir()
+            .map({ shows in
+                shows
+            })
         
-        let movies = [
-            Movie(identifier: 330459,
-                  title: "Rogue One: A Star Wars Story",
-                  posterPath: "/qjiskwlV1qQzRCjpV0cL9pEMF9a.jpg",
-                  backdropPath: "/tZjVVIYXACV4IIIhXeIM59ytqwS.jpg",
-                  releaseDate: "",
-                  genreIdentifiers: [28, 12, 878]),
-            Movie(identifier: 297762,
-                  title: "Wonder Woman",
-                  posterPath: "/gfJGlDaHuWimErCr5Ql0I8x9QSy.jpg",
-                  backdropPath: "/hA5oCgvgCxj5MEWcLpjXXTwEANF.jpg",
-                  releaseDate: "",
-                  genreIdentifiers: [28, 12, 14, 878]),
-            Movie(identifier: 324852,
-                  title: "Despicable Me 3",
-                  posterPath: "/5qcUGqWoWhEsoQwNUrtf3y3fcWn.jpg",
-                  backdropPath: "/7YoKt3hzTg38iPlpCumqcriaNTV.jpg",
-                  releaseDate: "",
-                  genreIdentifiers: [12, 16, 35]),
-            Movie(identifier: 80122,
-                  title: "El Capitán Trueno y el Santo Grial",
-                  posterPath: "8S0JkayAUgmTnR77qKpo3Ehxtxw.jpg",
-                  backdropPath: "46jNSA5xNm3dEKUwPyargoI0GJG.jpg",
-                  releaseDate: "2011-10-07T10:44:00+0000",
-                  genreIdentifiers: [12])
-            ]
+        Observable.combineLatest(showsOnTheAir, movieNowPlaying) { shows, movies in
+            return (shows, movies)
+        }
+        .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] shows, movies in
+                guard let `self` = self else { return }
+                
+                self.featureViewProtocol?.updateView(with: Array(movies))
+                self.featureViewProtocol?.updateView(with: Array(shows))
+            }, onError: { error in
+                // TODO: Do Error.
+
+            })
+            .disposed(by: disposeBag)
         
-        featureViewProtocol?.updateView(with: movies)
     }
 }
 
