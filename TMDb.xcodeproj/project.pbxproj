@@ -39,6 +39,7 @@
 		5142A055222ABD4C003DE338 /* FeaturedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A054222ABD4C003DE338 /* FeaturedPresenter.swift */; };
 		5142A058222ABEF7003DE338 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A056222ABEF7003DE338 /* FeaturedViewController.swift */; };
 		5142A059222ABEF7003DE338 /* FeaturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5142A057222ABEF7003DE338 /* FeaturedViewController.xib */; };
+		514AB8D0224184FB0020CA22 /* SearchResultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514AB8CF224184FB0020CA22 /* SearchResultsRepository.swift */; };
 		5151139F2238557F009BCDB8 /* SearchNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151139E2238557F009BCDB8 /* SearchNavigatorProtocol.swift */; };
 		515113A1223855CC009BCDB8 /* PhoneSearchNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515113A0223855CC009BCDB8 /* PhoneSearchNavigator.swift */; };
 		515C4F4B222975EE0047F460 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C4F4A222975EE0047F460 /* WebService.swift */; };
@@ -143,6 +144,7 @@
 		5142A054222ABD4C003DE338 /* FeaturedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPresenter.swift; sourceTree = "<group>"; };
 		5142A056222ABEF7003DE338 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		5142A057222ABEF7003DE338 /* FeaturedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedViewController.xib; sourceTree = "<group>"; };
+		514AB8CF224184FB0020CA22 /* SearchResultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsRepository.swift; sourceTree = "<group>"; };
 		5151139E2238557F009BCDB8 /* SearchNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigatorProtocol.swift; sourceTree = "<group>"; };
 		515113A0223855CC009BCDB8 /* PhoneSearchNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSearchNavigator.swift; sourceTree = "<group>"; };
 		515C4F4A222975EE0047F460 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -398,6 +400,14 @@
 			path = Respository;
 			sourceTree = "<group>";
 		};
+		514AB8CE224184D20020CA22 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				514AB8CF224184FB0020CA22 /* SearchResultsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		5151139D22385550009BCDB8 /* SearchNavigators */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +493,7 @@
 		515C4F7F222A5F070047F460 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				514AB8CE224184D20020CA22 /* Repositories */,
 				5151139D22385550009BCDB8 /* SearchNavigators */,
 				515C4F7E222A5EF70047F460 /* Presentation */,
 				515C4F82222A5F620047F460 /* DI */,
@@ -807,6 +818,7 @@
 			files = (
 				515C4F59222981520047F460 /* ImageSize.swift in Sources */,
 				515C4F4B222975EE0047F460 /* WebService.swift in Sources */,
+				514AB8D0224184FB0020CA22 /* SearchResultsRepository.swift in Sources */,
 				51157C9B2237039D00FD0718 /* PhoneDetailNavigator.swift in Sources */,
 				5142A051222AB929003DE338 /* Page.swift in Sources */,
 				515C4F6D2229CE6B0047F460 /* Media.swift in Sources */,

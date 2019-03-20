@@ -50,13 +50,12 @@ private extension FeaturedPresenter {
     func loadContentsFromApi() {
         let movieNowPlaying = featuredRepositoryProtocol.movieNowPlaying(region: Locale.current.regionCode!)
             .map({ movies in
-                // FIXME: Here we could see all movies or shows and we could send sorted array with movies.prefix(8)
-                movies
+                movies.prefix(CONSTANTS.FEATURED_PRESENTER_PREFIX_CONSTANTS.moviesToShow)
             })
         
         let showsOnTheAir = featuredRepositoryProtocol.showOnTheAir()
             .map({ shows in
-                shows
+                shows.prefix(CONSTANTS.FEATURED_PRESENTER_PREFIX_CONSTANTS.moviesToShow)
             })
         
         Observable.combineLatest(showsOnTheAir, movieNowPlaying) { shows, movies in
