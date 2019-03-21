@@ -48,25 +48,20 @@ final class ShowDetailPresenter: DetailPresenterProtocol {
 
 extension ShowDetailPresenter {
     private func detailSections(for show: ShowDetail) -> [DetailSection] {
-        // TODO: we should return an array of detail sections.
         var detailSections: [DetailSection] = [
             .header(DetailHeader(showDetail: show, dateFormatter: dateFormatter))
         ]
-        
         if !(show.overview?.isEmpty)! {
             if let overview = show.overview {
                 detailSections.append(.about(title: CONSTANTS.MOVIEW_DETAIL_PRESENTER_STRINGS.overviewTitle, detail: overview))
             }
         }
-        
         let items = show.credits?.cast.map({ creditMembers in
             PosterStripItem(castMember: creditMembers)
         })
-        
         if let items = items {
             detailSections.append(.posterStrip(title: CONSTANTS.MOVIEW_DETAIL_PRESENTER_STRINGS.castTitle, items: items))
         }
-        
         return detailSections
     }
 }

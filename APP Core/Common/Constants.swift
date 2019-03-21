@@ -52,6 +52,7 @@ struct FeaturedViewLiteral {
 struct MovieDetailPresenterStrings {
     let overviewTitle = "Overview"
     let castTitle = "Cast"
+    let biography = "Biography"
 }
 
 struct PosterStripLayoutConstans {

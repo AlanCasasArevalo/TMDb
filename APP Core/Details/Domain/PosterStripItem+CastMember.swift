@@ -12,8 +12,8 @@ extension PosterStripItem {
     init(castMember: Credits.CastMember) {
         identifier = castMember.identifier
         mediaType = .person
-        title = castMember.name
-        metadata = castMember.character
-        posterPath = castMember.profilePath
+        title = castMember.name ?? ""
+        metadata = castMember.character ?? ""
+        posterPath = castMember.profilePath ?? castMember.posterPath
     }
 }

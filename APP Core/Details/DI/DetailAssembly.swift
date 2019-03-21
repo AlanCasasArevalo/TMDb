@@ -47,22 +47,19 @@ final class DetailsAssembly {
         return ShowRepository(webService: webServiceAssembly.webService)
     }
     
+    func personPresenter (identifier: Int64) -> DetailPresenterProtocol {
+        return PersonDetailPresenter(personRepositoryProtocol: personRepository(), dateFormatter: webServiceAssembly.dateFormatter, identifier: identifier)
+    }
+    
+    func personRepository () -> PersonRepositoryProtocol {
+        return PersonRepository(webService: webServiceAssembly.webService)
+    }
+    
 }
 
 extension DetailsAssembly : DetailViewControllerProviderProtocol{
-    
-    // FIXME: Temporary we should change this for real DetailPresenter
-    class DummyDetailPresenter: DetailPresenterProtocol {
-        var view: DetailViewProtocol?
-        func didLoad() {}
-        func didSelect(item: PosterStripItem) {}
-    }
-    
     func detailViewController(identifier: Int64, mediaType: MediaType) -> UIViewController {
-        
         let presenter: DetailPresenterProtocol
-        
-        // TODO: We should implement shows and person details.
         switch mediaType {
         case .movie:
             presenter = moviePresenter(identifier: identifier)
@@ -70,10 +67,9 @@ extension DetailsAssembly : DetailViewControllerProviderProtocol{
         case .show:
             presenter = showPresenter(identifier: identifier)
             break
-        default:
-            presenter = DummyDetailPresenter()
+        case .person:
+            presenter = personPresenter(identifier: identifier)
         }
-        
         return DetailViewController(detailPresenter: presenter, detailHeaderPresenter: detailHeaderPresenter(), posterStripPresenter: posterStripPresenter())
     }
 }
