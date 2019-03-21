@@ -17,13 +17,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubq-uj-bPb">
-                    <rect key="frame" x="16" y="0.0" width="42" height="21"/>
+                    <rect key="frame" x="16" y="4" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sJt-Uh-vid">
-                    <rect key="frame" x="0.0" y="21" width="375" height="197"/>
+                    <rect key="frame" x="0.0" y="25" width="375" height="193"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewLayout key="collectionViewLayout" id="gXv-5A-gsl" customClass="PosterStripLayout" customModule="APP_Core" customModuleProvider="target"/>
                 </collectionView>
@@ -35,7 +35,7 @@
                 <constraint firstItem="sJt-Uh-vid" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c3W-oL-4qT"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sJt-Uh-vid" secondAttribute="trailing" id="gPI-Yu-kJG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="sJt-Uh-vid" secondAttribute="bottom" id="yDw-x0-jEh"/>
-                <constraint firstItem="ubq-uj-bPb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="yv9-sY-Ukn"/>
+                <constraint firstItem="ubq-uj-bPb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="yv9-sY-Ukn"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
