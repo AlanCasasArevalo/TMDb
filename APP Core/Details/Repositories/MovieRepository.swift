@@ -6,4 +6,26 @@
 //  Copyright © 2019 Alan Casas. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+protocol MovieRepositoryProtocol {
+    func movie(identifier: Int64) -> Observable<MovieDetail>
+}
+
+final class MovieRepository : MovieRepositoryProtocol {
+    
+    private let webService: WebService
+    
+    init( webService: WebService) {
+        self.webService = webService
+    }
+    
+    func movie(identifier: Int64) -> Observable<MovieDetail> {
+        return webService.loadGenericFromApi(type: MovieDetail.self, endpoint: .movie(identifier: identifier))
+    }
+}
+
+
+
+
+

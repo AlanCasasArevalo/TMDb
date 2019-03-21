@@ -27,6 +27,7 @@
 		5128FDC1222BEA9F003EE401 /* DetailAbout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDC0222BEA9F003EE401 /* DetailAbout.xib */; };
 		5128FDC4222BECAF003EE401 /* PosterStripCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDC2222BECAF003EE401 /* PosterStripCollectionCell.swift */; };
 		5128FDC5222BECAF003EE401 /* PosterStripCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDC3222BECAF003EE401 /* PosterStripCollectionCell.xib */; };
+		513568572242DF4F007BB044 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513568562242DF4F007BB044 /* MovieDetailPresenter.swift */; };
 		5142A03B222A845C003DE338 /* SearchResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A03A222A845C003DE338 /* SearchResultsPresenter.swift */; };
 		5142A03E222A8618003DE338 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A03D222A8618003DE338 /* SearchResultsViewController.swift */; };
 		5142A043222AA284003DE338 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142A042222AA284003DE338 /* CardView.swift */; };
@@ -132,6 +133,7 @@
 		5128FDC0222BEA9F003EE401 /* DetailAbout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAbout.xib; sourceTree = "<group>"; };
 		5128FDC2222BECAF003EE401 /* PosterStripCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterStripCollectionCell.swift; sourceTree = "<group>"; };
 		5128FDC3222BECAF003EE401 /* PosterStripCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterStripCollectionCell.xib; sourceTree = "<group>"; };
+		513568562242DF4F007BB044 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
 		5142A03A222A845C003DE338 /* SearchResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsPresenter.swift; sourceTree = "<group>"; };
 		5142A03D222A8618003DE338 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		5142A042222AA284003DE338 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				5187E3E1222DBA8400F8E7A9 /* PosterStripPresenter.swift */,
 				511949842232E9DE00DC4C74 /* DetailHeaderPresenter.swift */,
+				513568562242DF4F007BB044 /* MovieDetailPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -825,6 +828,7 @@
 				515C4F7D2229D2EF0047F460 /* SearchAssembly.swift in Sources */,
 				515C4F8A222A64220047F460 /* SearchResultCell.swift in Sources */,
 				5142A04F222AB844003DE338 /* FeaturedRepository.swift in Sources */,
+				513568572242DF4F007BB044 /* MovieDetailPresenter.swift in Sources */,
 				515C4F5F2229A8A00047F460 /* CoreAssembly.swift in Sources */,
 				51157C972237011300FD0718 /* DetailNavigatorProtocol.swift in Sources */,
 				5128FDB8222BBE05003EE401 /* MovieRepository.swift in Sources */,
