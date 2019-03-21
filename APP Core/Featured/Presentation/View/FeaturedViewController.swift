@@ -16,7 +16,9 @@ class FeaturedViewController: UIViewController {
     @IBOutlet weak var showsLabel: UILabel!
     @IBOutlet weak var moviesStackView: UIStackView!
     @IBOutlet weak var showsStackView: UIStackView!
-
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var featuredScrollView: UIScrollView!
+    
     private let featurePresenter: FeaturedPresenter
     private let cardPresenter: CardPresenter
     private let searchNavigatorProtocol: SearchNavigatorProtocol
@@ -43,8 +45,17 @@ class FeaturedViewController: UIViewController {
     }
 }
 
-
 extension FeaturedViewController: FeaturedViewProtocol{
+    func setLoading(loading: Bool) {
+        if loading {
+            featuredScrollView.isHidden = true
+            activityIndicatorView.startAnimating()
+        } else {
+            featuredScrollView.isHidden = false
+            activityIndicatorView.stopAnimating()
+        }
+    }
+    
     func setMoviesHeaderTitle(title: String) {
         moviesLabel.text = title
     }

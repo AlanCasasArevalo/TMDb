@@ -12,6 +12,7 @@ protocol FeaturedViewProtocol: class {
     var title: String? { get set }
     func setMoviesHeaderTitle(title: String)
     func setShowsHeaderTitle(title: String)
+    func setLoading(loading: Bool)
     
     func updateView(with movies: [Movie])
     func updateView(with shows: [Show])
@@ -29,12 +30,11 @@ class FeaturedPresenter {
     }
     
     func didLoad() {
+        featureViewProtocol?.setLoading(loading: true)
         featureViewProtocol?.title = NSLocalizedString(CONSTANTS.FEATURED_VIEW_LITERAL.FeatureTitle, comment: "")
         featureViewProtocol?.setShowsHeaderTitle(title: NSLocalizedString(CONSTANTS.FEATURED_VIEW_LITERAL.FeatureShowHeader, comment: ""))
         featureViewProtocol?.setMoviesHeaderTitle(title: NSLocalizedString(CONSTANTS.FEATURED_VIEW_LITERAL.FeatureMovieHeader, comment: ""))
-
-        loadContentsFromApi()
-        
+        loadContentsFromApi()        
     }
     
     func didSelect(show: Show) {
@@ -63,13 +63,15 @@ private extension FeaturedPresenter {
         }
         .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] shows, movies in
-                guard let `self` = self else { return }
-                
+                guard let `self` = self else { return }                
                 self.featureViewProtocol?.updateView(with: Array(movies))
                 self.featureViewProtocol?.updateView(with: Array(shows))
+                self.featureViewProtocol?.setLoading(loading: false)
             }, onError: { error in
-                // TODO: Do Error.
-
+                // TODO: We should return error.
+                print(error.localizedDescription)
+            }, onDisposed: { [weak self] in
+                self?.featureViewProtocol?.setLoading(loading: false)
             })
             .disposed(by: disposeBag)
         

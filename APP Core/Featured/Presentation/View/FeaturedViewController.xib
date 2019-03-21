@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeaturedViewController" customModule="APP_Core" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="Bl2-cu-tRs" id="8De-E7-Zc0"/>
+                <outlet property="featuredScrollView" destination="NeU-Kg-NCX" id="aJI-Hs-ZHC"/>
                 <outlet property="moviesLabel" destination="b8i-cq-s38" id="5Ct-he-u5t"/>
                 <outlet property="moviesStackView" destination="06i-Sx-kpY" id="UQw-Ur-oYu"/>
                 <outlet property="showsLabel" destination="q9P-Eg-V3K" id="T6N-UF-YA2"/>
@@ -45,7 +47,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Bl2-cu-tRs">
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Bl2-cu-tRs">
                             <rect key="frame" x="169" y="305" width="37" height="37"/>
                             <color key="color" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                         </activityIndicatorView>
@@ -79,7 +81,7 @@
                 <constraint firstItem="NeU-Kg-NCX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="upc-Ow-kuu"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-367.5" y="26.5"/>
+            <point key="canvasLocation" x="-938" y="-79"/>
         </view>
     </objects>
 </document>
