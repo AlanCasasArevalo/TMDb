@@ -24,7 +24,7 @@
 		5128FDBB222BC1BA003EE401 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDBA222BC1BA003EE401 /* DetailHeaderView.swift */; };
 		5128FDBD222BC1CC003EE401 /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDBC222BC1CC003EE401 /* DetailHeaderView.xib */; };
 		5128FDBF222BEA96003EE401 /* DetailAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDBE222BEA96003EE401 /* DetailAboutView.swift */; };
-		5128FDC1222BEA9F003EE401 /* DetailAbout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDC0222BEA9F003EE401 /* DetailAbout.xib */; };
+		5128FDC1222BEA9F003EE401 /* DetailAboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDC0222BEA9F003EE401 /* DetailAboutView.xib */; };
 		5128FDC4222BECAF003EE401 /* PosterStripCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128FDC2222BECAF003EE401 /* PosterStripCollectionCell.swift */; };
 		5128FDC5222BECAF003EE401 /* PosterStripCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128FDC3222BECAF003EE401 /* PosterStripCollectionCell.xib */; };
 		513568572242DF4F007BB044 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513568562242DF4F007BB044 /* MovieDetailPresenter.swift */; };
@@ -82,6 +82,7 @@
 		519A427822287E0C00DCCBB8 /* APP_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519A427122287E0C00DCCBB8 /* APP_Core.framework */; };
 		519A427922287E0C00DCCBB8 /* APP_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 519A427122287E0C00DCCBB8 /* APP_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		519A42802228808D00DCCBB8 /* WebServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A427F2228808D00DCCBB8 /* WebServiceConfiguration.swift */; };
+		51D57DDF22439E6B00F8093E /* PosterStripItem+CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D57DDE22439E6B00F8093E /* PosterStripItem+CastMember.swift */; };
 		51F59E71222AF5E40029DA4F /* FeaturedAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F59E70222AF5E40029DA4F /* FeaturedAssembly.swift */; };
 		51F59E74222AFE660029DA4F /* genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 51F59E73222AFE660029DA4F /* genres.json */; };
 		97188FC8721E091BDD6B9C79 /* Pods_TMDb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6617DDC61704BD5D5313D5F3 /* Pods_TMDb.framework */; };
@@ -130,7 +131,7 @@
 		5128FDBA222BC1BA003EE401 /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		5128FDBC222BC1CC003EE401 /* DetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderView.xib; sourceTree = "<group>"; };
 		5128FDBE222BEA96003EE401 /* DetailAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAboutView.swift; sourceTree = "<group>"; };
-		5128FDC0222BEA9F003EE401 /* DetailAbout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAbout.xib; sourceTree = "<group>"; };
+		5128FDC0222BEA9F003EE401 /* DetailAboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAboutView.xib; sourceTree = "<group>"; };
 		5128FDC2222BECAF003EE401 /* PosterStripCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterStripCollectionCell.swift; sourceTree = "<group>"; };
 		5128FDC3222BECAF003EE401 /* PosterStripCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterStripCollectionCell.xib; sourceTree = "<group>"; };
 		513568562242DF4F007BB044 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 		519A427422287E0C00DCCBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		519A427F2228808D00DCCBB8 /* WebServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConfiguration.swift; sourceTree = "<group>"; };
 		519A42812228816200DCCBB8 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
+		51D57DDE22439E6B00F8093E /* PosterStripItem+CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PosterStripItem+CastMember.swift"; sourceTree = "<group>"; };
 		51F59E70222AF5E40029DA4F /* FeaturedAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedAssembly.swift; sourceTree = "<group>"; };
 		51F59E73222AFE660029DA4F /* genres.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = genres.json; sourceTree = "<group>"; };
 		6617DDC61704BD5D5313D5F3 /* Pods_TMDb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +250,7 @@
 				511949762232E4E600DC4C74 /* MovieDetail.swift */,
 				511949782232E52400DC4C74 /* DetailHeader.swift */,
 				5119497C2232E5EE00DC4C74 /* DetailSection.swift */,
+				51D57DDE22439E6B00F8093E /* PosterStripItem+CastMember.swift */,
 				5119497E2232E66600DC4C74 /* DetailHeader+MovieDetail.swift */,
 			);
 			path = Domain;
@@ -262,7 +265,7 @@
 				5128FDBA222BC1BA003EE401 /* DetailHeaderView.swift */,
 				5128FDBC222BC1CC003EE401 /* DetailHeaderView.xib */,
 				5128FDBE222BEA96003EE401 /* DetailAboutView.swift */,
-				5128FDC0222BEA9F003EE401 /* DetailAbout.xib */,
+				5128FDC0222BEA9F003EE401 /* DetailAboutView.xib */,
 				5128FDC2222BECAF003EE401 /* PosterStripCollectionCell.swift */,
 				5128FDC3222BECAF003EE401 /* PosterStripCollectionCell.xib */,
 				5187E3DB222DB8D100F8E7A9 /* PosterStripView.swift */,
@@ -722,7 +725,7 @@
 				5142A059222ABEF7003DE338 /* FeaturedViewController.xib in Resources */,
 				5128FDC5222BECAF003EE401 /* PosterStripCollectionCell.xib in Resources */,
 				515C4F8B222A64220047F460 /* SearchResultCell.xib in Resources */,
-				5128FDC1222BEA9F003EE401 /* DetailAbout.xib in Resources */,
+				5128FDC1222BEA9F003EE401 /* DetailAboutView.xib in Resources */,
 				5128FDBD222BC1CC003EE401 /* DetailHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -861,6 +864,7 @@
 				515C4F7B2229D1B20047F460 /* UICollectionView+Reusable.swift in Sources */,
 				515C4F752229D0BA0047F460 /* NibLoadableView.swift in Sources */,
 				515C4F6B2229CE4D0047F460 /* Person.swift in Sources */,
+				51D57DDF22439E6B00F8093E /* PosterStripItem+CastMember.swift in Sources */,
 				515C4F772229D0E50047F460 /* ReusableView.swift in Sources */,
 				515C4F712229CF830047F460 /* MediaType.swift in Sources */,
 				5128FDB0222BBDB1003EE401 /* DetailViewController.swift in Sources */,

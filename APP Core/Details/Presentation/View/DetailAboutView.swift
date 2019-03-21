@@ -10,7 +10,8 @@ import UIKit
 
 class DetailAboutView: UIView, NibLoadableView {
 
-    @IBOutlet weak var detailAboutDetailsLabel: UILabel!
     @IBOutlet weak var detailAboutTitleLabel: UILabel!
+
+    @IBOutlet weak var detailAboutDetailsLabel: UILabel!
 
 }

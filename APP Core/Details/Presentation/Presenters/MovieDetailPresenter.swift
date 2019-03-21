@@ -53,6 +53,19 @@ extension MovieDetailPresenter {
         var detailSections: [DetailSection] = [
             .header(DetailHeader(movie: movie, dateFormatter: dateFormatter))
         ]
+        
+        if let overview = movie.overview {
+            detailSections.append(.about(title: CONSTANTS.MOVIEW_DETAIL_PRESENTER_STRINGS.overviewTitle, detail: overview))
+        }
+        
+        let items = movie.credits?.cast.map({ creditMembers in
+            PosterStripItem(castMember: creditMembers)
+        })
+        
+        if let items = items {
+            detailSections.append(.posterStrip(title: CONSTANTS.MOVIEW_DETAIL_PRESENTER_STRINGS.castTitle, items: items))
+        }
+        
         return detailSections
     }
 }

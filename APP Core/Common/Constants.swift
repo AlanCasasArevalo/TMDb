@@ -22,6 +22,7 @@ struct Constants {
     let FEATURED_VIEW_LITERAL = FeaturedViewLiteral()
     let SEARCH_CONTROLLER_CONSTANTS = SearchControllerConstants()
     let FEATURED_PRESENTER_PREFIX_CONSTANTS = FeaturedPresenterPrefix()
+    let MOVIEW_DETAIL_PRESENTER_STRINGS = MovieDetailPresenterStrings()
 }
 
 struct BaseUrls {
@@ -46,6 +47,11 @@ struct FeaturedViewLiteral {
     let FeatureTitle = "Featured"
     let FeatureShowHeader = "ON TV"
     let FeatureMovieHeader = "IN THEATERS"
+}
+
+struct MovieDetailPresenterStrings {
+    let overviewTitle = "Overview"
+    let castTitle = "Cast"
 }
 
 struct PosterStripLayoutConstans {

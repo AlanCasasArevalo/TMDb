@@ -62,7 +62,7 @@ let detailViewController = DetailViewController(detailPresenter: detailPresenter
 
 detailViewController.title = "Game of Thrones"
 let navigatorController = UINavigationController(rootViewController: detailViewController)
-navigatorController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
+//navigatorController.view.frame = UIScreen.main.bounds
 
 PlaygroundPage.current.liveView = navigatorController
 
