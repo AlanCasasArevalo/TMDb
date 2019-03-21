@@ -16,28 +16,32 @@ final class SearchResultsPresenter {
     let query = Variable("")
 
     let detailNavigator: DetailNavigatorProtocol
-
-    let movie = Movie(identifier: 80122,
-                      title: "El Capitán Trueno y el Santo Grial",
-                      posterPath: "8S0JkayAUgmTnR77qKpo3Ehxtxw.jpg",
-                      backdropPath: "46jNSA5xNm3dEKUwPyargoI0GJG.jpg",
-                      releaseDate: "2011-10-07T10:44:00+0000",
-                      genreIdentifiers: [12])
+    private let searchResultsRepositoryProtocol: SearchResultsRepositoryProtocol
     
-    init (detailNavigator: DetailNavigatorProtocol){
+    init (detailNavigator: DetailNavigatorProtocol, searchResultsRepositoryProtocol: SearchResultsRepositoryProtocol){
         self.detailNavigator = detailNavigator
+        self.searchResultsRepositoryProtocol = searchResultsRepositoryProtocol
     }
     
     /// The search results
-    lazy var searchResults: Observable<[SearchResult]> = Observable
-        // TODO: implement
-        .just([.movie(movie)])
+    lazy var searchResults: Observable<[SearchResult]> = query.asObservable()
+        .distinctUntilChanged()
+        .debounce(0.4, scheduler: MainScheduler.instance)
+        .flatMapLatest { [weak self] query -> Observable<[SearchResult]> in
+            guard let `self` = self,
+                query.count >= 2 else {
+                    return Observable.just([])
+                }
+            
+            return self.searchResultsRepositoryProtocol.searchResults(query: query, page: 1, includeAdult: false)
+            
+        }
+        .share()
+        .observeOn(MainScheduler.instance)
     
     
     /// Called by the view when the user selects a search result
     func didSelect(searchResult: SearchResult) {
-        // TODO: implement
-
         switch searchResult {
         case .movie(let movie):
             detailNavigator.showDetail(identifier: movie.identifier, mediaType: .movie)

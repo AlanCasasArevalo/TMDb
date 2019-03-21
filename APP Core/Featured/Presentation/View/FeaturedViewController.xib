@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,23 +28,27 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9P-Eg-V3K">
-                            <rect key="frame" x="16" y="16" width="42" height="21"/>
+                            <rect key="frame" x="16" y="16" width="42" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="181" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-5b-Ylh">
-                            <rect key="frame" x="0.0" y="45" width="375" height="181"/>
+                            <rect key="frame" x="0.0" y="44.5" width="375" height="181"/>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="207" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="06i-Sx-kpY">
-                            <rect key="frame" x="0.0" y="270.5" width="375" height="207"/>
+                            <rect key="frame" x="0.0" y="270" width="375" height="207"/>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8i-cq-s38">
-                            <rect key="frame" x="16" y="242" width="42" height="20.5"/>
+                            <rect key="frame" x="16" y="241.5" width="42" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Bl2-cu-tRs">
+                            <rect key="frame" x="169" y="305" width="37" height="37"/>
+                            <color key="color" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                        </activityIndicatorView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="b8i-cq-s38" firstAttribute="top" secondItem="xDH-5b-Ylh" secondAttribute="bottom" constant="16" id="1v3-3R-YTz"/>
@@ -54,6 +58,7 @@
                         <constraint firstItem="b8i-cq-s38" firstAttribute="leading" secondItem="NeU-Kg-NCX" secondAttribute="leading" constant="16" id="CbZ-Wp-omu"/>
                         <constraint firstItem="06i-Sx-kpY" firstAttribute="top" secondItem="b8i-cq-s38" secondAttribute="bottom" constant="8" id="Ckp-XY-fVd"/>
                         <constraint firstItem="xDH-5b-Ylh" firstAttribute="top" secondItem="q9P-Eg-V3K" secondAttribute="bottom" constant="8" id="LvA-rb-WCS"/>
+                        <constraint firstItem="Bl2-cu-tRs" firstAttribute="centerY" secondItem="NeU-Kg-NCX" secondAttribute="centerY" id="OWZ-aj-qC4"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="b8i-cq-s38" secondAttribute="trailing" constant="16" id="Wbd-JG-9ga"/>
                         <constraint firstItem="q9P-Eg-V3K" firstAttribute="top" secondItem="NeU-Kg-NCX" secondAttribute="top" constant="16" id="Wc3-Q5-vQ5"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q9P-Eg-V3K" secondAttribute="trailing" constant="16" id="Xoa-lF-vmI"/>
@@ -61,6 +66,7 @@
                         <constraint firstAttribute="bottom" secondItem="06i-Sx-kpY" secondAttribute="bottom" constant="16" id="gv3-j1-PtB"/>
                         <constraint firstItem="xDH-5b-Ylh" firstAttribute="width" secondItem="NeU-Kg-NCX" secondAttribute="width" id="jdF-GD-Qnp"/>
                         <constraint firstItem="q9P-Eg-V3K" firstAttribute="leading" secondItem="NeU-Kg-NCX" secondAttribute="leading" constant="16" id="kfb-ft-xgu"/>
+                        <constraint firstItem="Bl2-cu-tRs" firstAttribute="centerX" secondItem="NeU-Kg-NCX" secondAttribute="centerX" id="tPi-ID-W9x"/>
                         <constraint firstItem="xDH-5b-Ylh" firstAttribute="leading" secondItem="NeU-Kg-NCX" secondAttribute="leading" id="uAl-oB-GYA"/>
                     </constraints>
                 </scrollView>

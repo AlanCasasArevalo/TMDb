@@ -12,10 +12,12 @@ final class SearchAssembly {
     
     let imageLoadingAssembly: ImageLoadingAssembly
     let detailAssembly: DetailsAssembly
+    let webServiceAssembly: WebServiceAssembly
     
-    init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly) {
+    init(imageLoadingAssembly: ImageLoadingAssembly, detailAssembly: DetailsAssembly, webServiceAssembly: WebServiceAssembly) {
         self.imageLoadingAssembly = imageLoadingAssembly
         self.detailAssembly = detailAssembly
+        self.webServiceAssembly = webServiceAssembly
     }
     
     func searchResultCellPresenter() -> SearchResultCellPresenter{
@@ -23,11 +25,15 @@ final class SearchAssembly {
     }
 
     func presenter() -> SearchResultsPresenter{
-        return SearchResultsPresenter(detailNavigator: detailAssembly.detailNavigator())
+        return SearchResultsPresenter(detailNavigator: detailAssembly.detailNavigator(), searchResultsRepositoryProtocol: searchResultsRepository())
     }
     
     func searchNavigatorProtocol () -> SearchNavigatorProtocol {
         return PhoneSearchNavigator(viewControllerProvider: self)
+    }
+    
+    func searchResultsRepository() -> SearchResultsRepositoryProtocol {
+        return SearchResultsRepository(webService: webServiceAssembly.webService)
     }
     
 }

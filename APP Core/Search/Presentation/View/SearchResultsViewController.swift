@@ -71,6 +71,8 @@ private extension SearchResultsViewController {
 extension SearchResultsViewController : UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         presenter.query.value = searchController.searchBar.text ?? ""
+        // TODO: Here you can see the query 
+        print(presenter.query.value)
     }
 }
 

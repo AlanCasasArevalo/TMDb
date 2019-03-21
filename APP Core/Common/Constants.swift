@@ -21,6 +21,8 @@ struct Constants {
     let POSTER_STRIP_LAYOUT_CONSTANTS = PosterStripLayoutConstans()
     let FEATURED_VIEW_LITERAL = FeaturedViewLiteral()
     let SEARCH_CONTROLLER_CONSTANTS = SearchControllerConstants()
+    let FEATURED_PRESENTER_PREFIX_CONSTANTS = FeaturedPresenterPrefix()
+    let MOVIEW_DETAIL_PRESENTER_STRINGS = MovieDetailPresenterStrings()
 }
 
 struct BaseUrls {
@@ -47,6 +49,11 @@ struct FeaturedViewLiteral {
     let FeatureMovieHeader = "IN THEATERS"
 }
 
+struct MovieDetailPresenterStrings {
+    let overviewTitle = "Overview"
+    let castTitle = "Cast"
+}
+
 struct PosterStripLayoutConstans {
     let itemSize = CGSize(width: 96, height: 186)
     let minimumLineSpacing: CGFloat = 16
@@ -56,3 +63,10 @@ struct PosterStripLayoutConstans {
 struct SearchControllerConstants {
     let placeHolderTitle = "Search"
 }
+
+
+struct FeaturedPresenterPrefix {
+    let moviesToShow = 10
+    let showsToShow = 10
+}
+

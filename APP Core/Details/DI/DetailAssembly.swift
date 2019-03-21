@@ -9,12 +9,14 @@
 import Foundation
 
 final class DetailsAssembly {
-    let imageLoadingAssembly: ImageLoadingAssembly
-    let navigationController: UINavigationController
+    private let imageLoadingAssembly: ImageLoadingAssembly
+    private let navigationController: UINavigationController
+    private let webServiceAssembly: WebServiceAssembly
     
-    init (imageLoadingAssembly: ImageLoadingAssembly, navigationController: UINavigationController) {
+    init (imageLoadingAssembly: ImageLoadingAssembly, navigationController: UINavigationController, webServiceAssembly: WebServiceAssembly) {
         self.imageLoadingAssembly = imageLoadingAssembly
         self.navigationController = navigationController
+        self.webServiceAssembly = webServiceAssembly
     }
 
     func detailHeaderPresenter () -> DetailHeaderPresenter {
@@ -29,6 +31,14 @@ final class DetailsAssembly {
         return PhoneDetailNavigator(navigationController: navigationController, viewControllerProvider: self)
     }
     
+    func moviePresenter( identifier: Int64 ) -> DetailPresenterProtocol {
+        return MovieDetailPresenter(movieRepositoryProtocol: movieRepository(), dateFormatter: webServiceAssembly.dateFormatter, identifier: identifier)
+    }
+    
+    func movieRepository() -> MovieRepositoryProtocol {
+        return MovieRepository(webService: webServiceAssembly.webService)
+    }
+    
 }
 
 extension DetailsAssembly : DetailViewControllerProviderProtocol{
@@ -41,6 +51,17 @@ extension DetailsAssembly : DetailViewControllerProviderProtocol{
     }
     
     func detailViewController(identifier: Int64, mediaType: MediaType) -> UIViewController {
-        return DetailViewController(detailPresenter: DummyDetailPresenter(), detailHeaderPresenter: detailHeaderPresenter(), posterStripPresenter: posterStripPresenter())
+        
+        let presenter: DetailPresenterProtocol
+        
+        // TODO: We should implement shows and person details.
+        switch mediaType {
+        case .movie:
+            presenter = moviePresenter(identifier: identifier)
+        default:
+            presenter = DummyDetailPresenter()
+        }
+        
+        return DetailViewController(detailPresenter: presenter, detailHeaderPresenter: detailHeaderPresenter(), posterStripPresenter: posterStripPresenter())
     }
 }
