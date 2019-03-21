@@ -25,7 +25,7 @@ final class MovieDetailPresenter : DetailPresenterProtocol {
     
     func didLoad() {
         view?.setLoading(loading: true)
-        movieRepositoryProtocol.movie(identifier: identifier)
+        movieRepositoryProtocol.movieDetail(identifier: identifier)
             .map { [weak self]  movieDetail in
                 self?.detailSections(for: movieDetail) ?? []
             }
@@ -51,7 +51,7 @@ extension MovieDetailPresenter {
     private func detailSections(for movie: MovieDetail) -> [DetailSection] {
         // TODO: we should return an array of detail sections.
         var detailSections: [DetailSection] = [
-            .header(DetailHeader(movie: movie, dateFormatter: dateFormatter))
+            .header(DetailHeader(movieDetail: movie, dateFormatter: dateFormatter))
         ]
         
         if !(movie.overview?.isEmpty)! {

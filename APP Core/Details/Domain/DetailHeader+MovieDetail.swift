@@ -9,14 +9,14 @@
 import Foundation
 
 extension DetailHeader {
-    init(movie: MovieDetail, dateFormatter: DateFormatter) {
-        title = movie.title
-        posterPath = movie.posterPath
-        backdropPath = movie.backdropPath
+    init(movieDetail: MovieDetail, dateFormatter: DateFormatter) {
+        title = movieDetail.title
+        posterPath = movieDetail.posterPath
+        backdropPath = movieDetail.backdropPath
         
-        let releaseDate = movie.releaseDate.flatMap { dateFormatter.date(from: $0)}
+        let releaseDate = movieDetail.releaseDate.flatMap { dateFormatter.date(from: $0)}
         let year = (releaseDate?.year).map { String($0) }
-        let duration = "\(movie.runtime) min."
+        let duration = "\(movieDetail.runtime) min."
         
         metadata = [year, duration]
             .compactMap {

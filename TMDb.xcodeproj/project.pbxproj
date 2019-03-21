@@ -83,6 +83,10 @@
 		519A427922287E0C00DCCBB8 /* APP_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 519A427122287E0C00DCCBB8 /* APP_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		519A42802228808D00DCCBB8 /* WebServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A427F2228808D00DCCBB8 /* WebServiceConfiguration.swift */; };
 		51D57DDF22439E6B00F8093E /* PosterStripItem+CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D57DDE22439E6B00F8093E /* PosterStripItem+CastMember.swift */; };
+		51D57DE32243C2CF00F8093E /* ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D57DE22243C2CF00F8093E /* ShowDetail.swift */; };
+		51D57DE52243CF0100F8093E /* ShowRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D57DE42243CF0100F8093E /* ShowRepository.swift */; };
+		51D57DE72243D04200F8093E /* ShowDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D57DE62243D04200F8093E /* ShowDetailPresenter.swift */; };
+		51D57DE92243D23500F8093E /* DetailHeader+ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D57DE82243D23500F8093E /* DetailHeader+ShowDetail.swift */; };
 		51F59E71222AF5E40029DA4F /* FeaturedAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F59E70222AF5E40029DA4F /* FeaturedAssembly.swift */; };
 		51F59E74222AFE660029DA4F /* genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 51F59E73222AFE660029DA4F /* genres.json */; };
 		97188FC8721E091BDD6B9C79 /* Pods_TMDb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6617DDC61704BD5D5313D5F3 /* Pods_TMDb.framework */; };
@@ -193,6 +197,10 @@
 		519A427F2228808D00DCCBB8 /* WebServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConfiguration.swift; sourceTree = "<group>"; };
 		519A42812228816200DCCBB8 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
 		51D57DDE22439E6B00F8093E /* PosterStripItem+CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PosterStripItem+CastMember.swift"; sourceTree = "<group>"; };
+		51D57DE22243C2CF00F8093E /* ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetail.swift; sourceTree = "<group>"; };
+		51D57DE42243CF0100F8093E /* ShowRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRepository.swift; sourceTree = "<group>"; };
+		51D57DE62243D04200F8093E /* ShowDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailPresenter.swift; sourceTree = "<group>"; };
+		51D57DE82243D23500F8093E /* DetailHeader+ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailHeader+ShowDetail.swift"; sourceTree = "<group>"; };
 		51F59E70222AF5E40029DA4F /* FeaturedAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedAssembly.swift; sourceTree = "<group>"; };
 		51F59E73222AFE660029DA4F /* genres.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = genres.json; sourceTree = "<group>"; };
 		6617DDC61704BD5D5313D5F3 /* Pods_TMDb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,10 +256,12 @@
 				5187E3DF222DBA5A00F8E7A9 /* PosterStripItem.swift */,
 				511949732232E49B00DC4C74 /* Credits.swift */,
 				511949762232E4E600DC4C74 /* MovieDetail.swift */,
+				51D57DE22243C2CF00F8093E /* ShowDetail.swift */,
 				511949782232E52400DC4C74 /* DetailHeader.swift */,
 				5119497C2232E5EE00DC4C74 /* DetailSection.swift */,
 				51D57DDE22439E6B00F8093E /* PosterStripItem+CastMember.swift */,
 				5119497E2232E66600DC4C74 /* DetailHeader+MovieDetail.swift */,
+				51D57DE82243D23500F8093E /* DetailHeader+ShowDetail.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -317,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				5128FDB7222BBE05003EE401 /* MovieRepository.swift */,
+				51D57DE42243CF0100F8093E /* ShowRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -327,6 +338,7 @@
 				5187E3E1222DBA8400F8E7A9 /* PosterStripPresenter.swift */,
 				511949842232E9DE00DC4C74 /* DetailHeaderPresenter.swift */,
 				513568562242DF4F007BB044 /* MovieDetailPresenter.swift */,
+				51D57DE62243D04200F8093E /* ShowDetailPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -839,9 +851,11 @@
 				5187E3E0222DBA5A00F8E7A9 /* PosterStripItem.swift in Sources */,
 				5142A03E222A8618003DE338 /* SearchResultsViewController.swift in Sources */,
 				511949852232E9DE00DC4C74 /* DetailHeaderPresenter.swift in Sources */,
+				51D57DE72243D04200F8093E /* ShowDetailPresenter.swift in Sources */,
 				5187E3E2222DBA8400F8E7A9 /* PosterStripPresenter.swift in Sources */,
 				519A42802228808D00DCCBB8 /* WebServiceConfiguration.swift in Sources */,
 				5142A04D222AB63D003DE338 /* Genre.swift in Sources */,
+				51D57DE52243CF0100F8093E /* ShowRepository.swift in Sources */,
 				511949772232E4E600DC4C74 /* MovieDetail.swift in Sources */,
 				515C4F662229BC930047F460 /* ImageLoadingAssembly.swift in Sources */,
 				515C4F682229CE280047F460 /* Show.swift in Sources */,
@@ -866,10 +880,12 @@
 				515C4F6B2229CE4D0047F460 /* Person.swift in Sources */,
 				51D57DDF22439E6B00F8093E /* PosterStripItem+CastMember.swift in Sources */,
 				515C4F772229D0E50047F460 /* ReusableView.swift in Sources */,
+				51D57DE32243C2CF00F8093E /* ShowDetail.swift in Sources */,
 				515C4F712229CF830047F460 /* MediaType.swift in Sources */,
 				5128FDB0222BBDB1003EE401 /* DetailViewController.swift in Sources */,
 				515C4F4E2229769F0047F460 /* Constants.swift in Sources */,
 				515C4F84222A60980047F460 /* SearchResultPresenter.swift in Sources */,
+				51D57DE92243D23500F8093E /* DetailHeader+ShowDetail.swift in Sources */,
 				5187E3E4222DBD2200F8E7A9 /* PosterStripLayout.swift in Sources */,
 				515C4F5222297D8F0047F460 /* WebServiceAssembly.swift in Sources */,
 				5128FDBF222BEA96003EE401 /* DetailAboutView.swift in Sources */,

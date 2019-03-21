@@ -35,11 +35,13 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="181" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-5b-Ylh">
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="181" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-5b-Ylh">
                             <rect key="frame" x="0.0" y="44.5" width="375" height="181"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="207" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="06i-Sx-kpY">
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="207" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="06i-Sx-kpY">
                             <rect key="frame" x="0.0" y="270" width="375" height="207"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8i-cq-s38">
                             <rect key="frame" x="16" y="241.5" width="42" height="20.5"/>
