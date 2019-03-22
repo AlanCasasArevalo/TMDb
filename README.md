@@ -6,6 +6,7 @@
 This application was maked with MCP architecture. 
 
 ## Preview
+![](https://github.com/AlanCasasArevalo/TMDb/blob/master/TMDB%20Gif.gif)
 
 ## Installation
 
