@@ -49,7 +49,6 @@ final class MovieDetailPresenter : DetailPresenterProtocol {
 
 extension MovieDetailPresenter {
     private func detailSections(for movie: MovieDetail) -> [DetailSection] {
-        // TODO: we should return an array of detail sections.
         var detailSections: [DetailSection] = [
             .header(DetailHeader(movieDetail: movie, dateFormatter: dateFormatter))
         ]
