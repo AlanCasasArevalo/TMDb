@@ -32,7 +32,7 @@ final class DetailsAssembly {
     }
     
     func moviePresenter( identifier: Int64 ) -> DetailPresenterProtocol {
-        return MovieDetailPresenter(movieRepositoryProtocol: movieRepository(), dateFormatter: webServiceAssembly.dateFormatter, identifier: identifier)
+        return MovieDetailPresenter(movieRepositoryProtocol: movieRepository(), dateFormatter: webServiceAssembly.dateFormatter, identifier: identifier, detailNavigatorProtocol: detailNavigator())
     }
     
     func movieRepository() -> MovieRepositoryProtocol {
@@ -48,7 +48,7 @@ final class DetailsAssembly {
     }
     
     func personPresenter (identifier: Int64) -> DetailPresenterProtocol {
-        return PersonDetailPresenter(personRepositoryProtocol: personRepository(), dateFormatter: webServiceAssembly.dateFormatter, identifier: identifier)
+        return PersonDetailPresenter(personRepositoryProtocol: personRepository(), dateFormatter: webServiceAssembly.dateFormatter, identifier: identifier, detailNavigatorProtocol: detailNavigator())
     }
     
     func personRepository () -> PersonRepositoryProtocol {

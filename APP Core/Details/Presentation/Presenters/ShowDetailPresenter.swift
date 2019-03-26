@@ -15,11 +15,13 @@ final class ShowDetailPresenter: DetailPresenterProtocol {
     private let dateFormatter : DateFormatter
     private let identifier: Int64
     private let disposeBag = DisposeBag()
+    private let detailNavigatorProtocol: DetailNavigatorProtocol
     
-    init(showRepositoryProtocol : ShowRepositoryProtocol, dateFormatter : DateFormatter, identifier: Int64) {
+    init(showRepositoryProtocol : ShowRepositoryProtocol, dateFormatter : DateFormatter, identifier: Int64, detailNavigatorProtocol: DetailNavigatorProtocol) {
         self.showRepositoryProtocol = showRepositoryProtocol
         self.dateFormatter = dateFormatter
         self.identifier = identifier
+        self.detailNavigatorProtocol = detailNavigatorProtocol
     }
     
     func didLoad() {
@@ -41,7 +43,7 @@ final class ShowDetailPresenter: DetailPresenterProtocol {
     }
     
     func didSelect(item: PosterStripItem) {
-        
+        detailNavigatorProtocol.showDetail(identifier: item.identifier, mediaType: .person)
     }
     
 }
