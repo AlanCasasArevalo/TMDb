@@ -40,7 +40,7 @@ final class DetailsAssembly {
     }
     
     func showPresenter(identifier: Int64) -> DetailPresenterProtocol {
-        return ShowDetailPresenter(showRepositoryProtocol: showRepository(), dateFormatter: webServiceAssembly.dateFormatter, identifier: identifier)
+        return ShowDetailPresenter(showRepositoryProtocol: showRepository(), dateFormatter: webServiceAssembly.dateFormatter, identifier: identifier, detailNavigatorProtocol: detailNavigator())
     }
     
     func showRepository () -> ShowRepositoryProtocol {
